@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="./main.js">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="/assets/images/fav-icon.ico">
+    <title>Sandesh Subedi</title>
+</head>
+
+<body class="font-firaCon text-textColor bg-stone-200" oncontextmenu="return false" >
+
+    <!-- Home Page  -->
+    <section id="sectionHome" class="h-screen w-screen bg-gradient-to-b from-linearDark to-linearLight">
+
+        <nav data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="linear"
+            class="hidden md:flex absolute left-[30%] top-10 justify-between items-center bg-zinc-700 w-[40%] mx-auto px-12 py-3 rounded-full text-sm font-normal">
+            <div>
+                <img class="h-6 w-auto cursor-pointer animate-pulse" src="/assets/images/web-logo.svg" alt="">
+            </div>
+            <div class="">
+                <ul class="flex space-x-8 text-green-50">
+                    <div class="flex items-center">
+                        <img class="h-3 w-auto pr-2" src="/assets/images/blogs-icon.png" alt="">
+                        <li class="cursor-pointer hover:text-gray-300 ease-in-out duration-300"><a href="/src/page_not_found.html" target="_blank">Blogs</a>
+                        </li>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-3 w-auto pr-2" src="/assets/images/man-icon.png" alt="">
+                        <li class="cursor-pointer hover:text-gray-300 ease-in-out duration-300"><a href="#sectionAbout">About</a>
+                        </li>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-3 w-auto pr-2" src="/assets/images/contact-icon.png" alt="">
+                        <li class="cursor-pointer hover:text-gray-300 ease-in-out duration-300"><a href="/src/page_not_found.html" target="_blank">Contact</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+
+        <img class="hidden sm:flex absolute top-32 left-80 h-10 w-auto opacity-25 hover:opacity-100 ease-in-out duration-1000"
+            src="/assets/images/stars-icon.png" alt="Star Icon">
+
+        <div class="flex justify-center items-center h-full w-full bg-overlay text-center">
+
+            <!-- flex : to use flex-div as a container
+        h-screen: to size the container-height to viewport-height
+        justify-center: horizontal center (main-axis)
+        items-center: horizontal center (cross-axis) -->
+
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+                <div class="flex justify-center items-end mt-16">
+                    <img class="h-10 w-auto" src="/assets/images/man-vr.png" alt="Boy with VR Icon">
+                    &nbsp; &nbsp;
+                    <span class="text-base leading-noLineHeight">Hi, I'm Sandesh</span>
+                </div>
+                <h1 class="text-4xl font-bold leading-loose">Designing Better Lives Through Tech</h1>
+                <div class="flex justify-center mt-4 mb-16">
+                    <div
+                        class="group flex border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                        <img class="w-4 h-auto group-hover:rotate-[320deg] ease-in-out duration-700"
+                            src="/assets/images/projects-icon.svg" alt="">
+                        &nbsp;
+                        <a href="#sectionProject">Projects</a>
+                    </div>
+                    <div class="group flex border border-transparent rounded-3xl px-6 py-2">
+                        <img class="w-4 h-auto group-hover:rotate-[-12deg] ease-in-out duration-700"
+                            src="/assets/images/resume-icon.svg" alt="">
+                        &nbsp;
+                        <a class="" href="/assets/contents/CV-Sandesh Subedi.pdf"
+                            download="Resume-Sandesh Subedi">Resume</a>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-2">
+                    <a href="#sectionProject" class="scroll-smooth duration-1000">
+                        <img class="h-6 w-auto animate-bounce" src="/assets/images/go-down-arrow.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <img class="hidden sm:flex absolute bottom-32 right-80 h-10 w-auto opacity-20 hover:opacity-100 ease-in-out duration-1000"
+            src="/assets/images/moon-icon.png" alt="Star Icon">
+    </section>
+
+    <!-- Projects & Links -->
+    <section class="h-full lg:h-screen w-screen bg-gradient-to-t from-linearDark to-linearLight lg:mb-0">
+        <div id="sectionProject" class="justify-center h-full w-full bg-overlay text-center">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="py-12 lg:pt-20 lg:pb-16">
+                <h1 class="text-4xl font-semibold leading-normal">Ink & Bytes</h1>
+                <span class="text-base leading-loose">My Coding Ventures, Design Sagas, Prose Epics, and Penning
+                    Insights</span>
+            </div>
+            <div class="w-screen mx-auto">
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-10 mx-auto lg:px-48 items-center">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                        class="group pt-12 pb-4 cursor-pointer rounded-xl">
+                        <a href="./coding_projects.html" target="_blank">
+                            <div class="flex justify-center pb-8">
+                                <img class="h-36 w-auto group-hover:scale-105 overflow-hidden ease-in-out duration-1000"
+                                    src="/assets/images/coding-projects-icon.svg" alt="">
+                            </div>
+                            <h3 class="text-center text-xl font-semibold">Coding Projects</h3>
+                            <p class="text-sm pt-1 text-zinc-600">Turning caffeine into code since 2019</p>
+                        </a>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                        class="group cursor-pointer pt-12 pb-4 rounded-xl">
+                        <a href="./docs_and_articles.html" target="_blank">
+                            <div class="flex justify-center pb-8">
+                                <img class="h-36 w-auto group-hover:scale-105 overflow-hidden ease-in-out duration-1000"
+                                    src="/assets/images/article.svg" alt="">
+                            </div>
+                            <h3 class="text-center text-xl font-semibold">Docs & Articles</h3>
+                            <p class="text-sm pt-1 text-zinc-600">Project reports, presentations, and research articles
+                            </p>
+                        </a>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                        class="group cursor-pointer pt-12 pb-4 rounded-xl">
+                        <a href="/src/page_not_found.html" target="_blank">
+                            <div class="flex justify-center pb-8">
+                                <img class="h-36 w-auto group-hover:scale-105 overflow-hidden ease-in-out duration-1000"
+                                    src="/assets/images/ui-ux-projects-icon.svg" alt="">
+                            </div>
+                            <h3 class="text-center text-xl font-semibold">UI/UX Projects</h3>
+                            <p class="text-sm pt-1 text-zinc-600">Designing interfaces that prevents your device from
+                                airbrone adventure</p>
+                        </a>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                        class="group cursor-pointer pt-12 pb-4 rounded-xl">
+                        <a href="/src/page_not_found.html" target="_blank">
+                            <div class="flex justify-center pb-8">
+                                <img class="h-36 w-auto group-hover:scale-105 overflow-hidden ease-in-out duration-1000"
+                                    src="/assets/images/courses-project-icon.svg" alt="">
+                            </div>
+                            <h3 class="text-center text-xl font-semibold">Courses & ECAs</h3>
+                            <p class="text-sm pt-1 text-zinc-600">Investing in myself & the community. <br> No paid
+                                certs because I'm no Mr.
+                                Beast
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-16 pb-24 md:mb-0">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                        class="w-auto group flex border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                        <img class="w-4 h-auto group-hover:rotate-[-45deg] ease-in-out duration-700"
+                            src="/assets/images/projects-icon.svg" alt="">
+                        &nbsp;
+                        <a href="/src/page_not_found.html" target="_blank">View Ongoing Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internships & Works -->
+    <section class="h-full md:h-screen w-screen bg-gradient-to-b from-linearDark to-linearLight pb-32 md:pb-0">
+        <div id="sectionExperience" class="block justify-center h-full w-full bg-overlay text-center">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="pt-20 pb-10 md:pb-20">
+                <h1 class="text-4xl font-semibold leading-normal">Professional Experience</h1>
+                <span class="text-base leading-loose">Journey of Learning and Leading Change</span>
+            </div>
+
+            <!-- NepTechPal Experience Mobile First-->
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="grid grid-rows-1 mx-auto gap-4 py-12 md:grid-cols-3">
+                <div class="grid grid-flow-row md:col-span-1 min-w-0 justify-center">
+                    <div class="grid grid-flow-col col-span-1 items-center">
+                        <img class="h-5 w-auto opacity-50" src="/assets/images/year-calender-icon.png" alt="">
+                        &nbsp;
+                        <h2 class="text-center text-xl font-medium opacity-50"> 2023</h2>
+                    </div>
+                </div>
+                <div class="col-span-1 min-w-0">
+
+                    <div class="justify-center items-center grid grid-flow-col col-span-1">
+                        <img class="h-10 w-auto pr-1" src="/assets/images/neptechpal-logo.webp" alt="">
+                        <div class="pl-1 grid grid-flow-row justify-center text-left">
+                            <a href="https://www.neptechpal.com.np/" target="_blank">
+                                <h2 class="font-medium">NepTechPal Pvt. Ltd.</h2>
+                            </a>
+                            <p class="text-sm">Pokhara, Nepal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 min-w-0">
+                    <div class="grid grid-flow-col items-center justify-center lg:justify-start">
+                        <img class="h-5 w-auto" src="/assets/images/ui-ux-icon.png" alt="">
+                        &nbsp;
+                        <h2 class="text-center text-xl font-medium"> Junior UI/UX Developer</h2>
+                    </div>
+                </div>
+            </div>
+
+            <hr data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="mx-16 shadow-inner">
+
+            <!-- Rangin Experience  -->
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="grid grid-rows-1 mx-auto gap-4 py-12 md:grid-cols-3">
+                <div class="col-span-1 min-w-0">
+
+                    <div class="grid grid-flow-col col-span-1 items-center justify-center">
+                        <img class="h-5 w-auto opacity-50" src="/assets/images/year-calender-icon.png" alt="">
+                        &nbsp;
+                        <h2 class="text-center text-xl font-medium opacity-50"> 2022</h2>
+                    </div>
+                </div>
+                <div class="col-span-1 min-w-0">
+
+                    <div class="justify-center items-center grid grid-flow-col col-span-1">
+                        <img class="h-10 w-auto pr-1" src="/assets/images/rangin-logo.png" alt="">
+                        <div class="pl-1 grid grid-flow-row justify-center text-left">
+                            <a href="https://www.rangin.com.np/" target="_blank">
+                                <h2 class="font-medium">Rangin Technology</h2>
+                            </a>
+                            <p class="text-sm">Pokhara, Nepal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 min-w-0">
+                    <div class="grid grid-flow-col items-center justify-center lg:justify-start">
+                        <img class="h-5 w-auto" src="/assets/images/ui-ux-icon.png" alt="">
+                        &nbsp;
+                        <h2 class="text-center text-xl font-medium">Flutter & UI/UX Intern</h2>
+                    </div>
+                </div>
+            </div>
+
+            <hr data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="mx-16 shadow-inner">
+
+            <!-- SteveXplains Experience  -->
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="grid grid-rows-1 mx-auto gap-4 py-12 md:grid-cols-3">
+                <div class="col-span-1 min-w-0">
+
+                    <div class="grid grid-flow-col col-span-1 items-center justify-center">
+                        <img class="h-5 w-auto opacity-50" src="/assets/images/year-calender-icon.png" alt="">
+                        &nbsp;
+                        <h2 class="text-center text-xl font-medium opacity-50"> 2019 - Present</h2>
+                    </div>
+                </div>
+                <div class="col-span-1 min-w-0">
+
+                    <div class="justify-center items-center grid grid-flow-col col-span-1">
+                        <img class="h-10 w-auto pr-1" src="/assets/images/stevexplains.com.png" alt="">
+                        <div class="pl-1 grid grid-flow-row justify-center text-left">
+                            <a href="https://www.youtube.com/@stevekranz5986" target="_blank">
+                                <h2 class="font-medium">SteveXplains</h2>
+                            </a>
+                            <p class="text-sm">Al Ain, UAE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 min-w-0">
+                    <div class="grid grid-flow-col items-center justify-center lg:justify-start">
+                        <img class="h-5 w-auto" src="/assets/images/video-edit-icon.png" alt="">
+                        &nbsp;
+                        <h2 class="text-center text-xl font-medium"> Video Editing & Content Creation</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Page  -->
+    <!-- <section class="h-screen w-screen bg-gradient-to-b from-linearDark to-linearLight overflow-hidden">
+        <div id="sectionAbout" class="flex justify-center items-center h-full w-full bg-overlay text-center">
+
+            <img class="hidden sm:flex relative top-[-200px] left-48 h-10 w-auto opacity-25 hover:opacity-100 ease-in-out duration-1000"
+                src="/assets/images/stars-icon.png" alt="Star Icon">
+
+            <img class="hidden sm:flex relative top-[200px] left-96 h-10 w-auto opacity-25 hover:opacity-100 ease-in-out duration-1000"
+                src="/assets/images/moon-icon.png" alt="Star Icon">
+
+            <div data-aos="fade-up" data-aos-duration="2000" data-aos-easing="linear"
+                class="grid grid-row-2 md:grid-cols-2 px-4 md:px-8 lg:px-40 py-0 h-full w-full items-center">
+                <div class="flex items-center my-4">
+                    <div class="grid grid-flow-row items-center justify-start h-min text-left gap-5">
+                        <h1 class="text-lg">So, who am I beyond the professional lens?</h1>
+                        <h2 class="text-5xl font-bold">PEEK BEHIND THE PIXELS</h2>
+                        <div class="flex justify-start">
+                            <div
+                                class="w-auto group flex items-center border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                                <img class="h-4 w-auto group-hover:rotate-[220deg] ease-in-out duration-700"
+                                    src="/assets/images/explore-icon.png" alt="">
+                                &nbsp;
+                                <a href="#sectionProject">Explore My Story</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-screen lg:h-5/6 w-full"
+                    style="background-image: url(/assets/images/ai-sketch\ copy.png); background-size: cover; background-position: top;">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Updated About Me Page Part II -->
+    <!-- <section id="sectionAbout"
+        class="h-screen w-screen bg-gradient-to-t from-linearDark to-linearLight overflow-hidden md:p-32">
+        <div data-aos="fade-up" data-aos-duration="2000" data-aos-easing="linear"
+            class="h-56 md:h-1/2 lg:h-3/5 w-auto flex items-center bg-contain lg:bg-cover bg-top bg-no-repeat mt-40 sm:mt-20 md:mt-auto"
+            style="background-image: url(/assets/images/Cover\ Picture\ 04.svg);">
+        </div>
+        <div data-aos="fade-up" data-aos-duration="2000" data-aos-easing="linear" class="flex justify-center sm:pt-8">
+            <div
+                class="w-auto group flex items-center border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                <img class="h-4 w-auto group-hover:rotate-[220deg] ease-in-out duration-700"
+                    src="/assets/images/explore-icon.png" alt="">
+                &nbsp;
+                <a href="#sectionProject">Explore My Story</a>
+            </div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="2000" data-aos-easing="linear"
+            class="h-2/5 w-auto items-center mt-24">
+            <form class="w-auto px-8 mx-auto">
+                <div class="grid md:grid-cols-3 md:gap-6">
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="text" name="floating_first_name" id="floating_first_name"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-zinc-800 dark:border-gray-600 dark:focus:border-zinc-500 focus:outline-none focus:ring-0 focus:border-zinc-600 peer"
+                            placeholder=" " required />
+                        <label for="floating_first_name"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-zinc-600 peer-focus:dark:text-zinc-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Full
+                            name</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="email" name="floating_email" id="floating_email"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-zinc-800 dark:border-gray-600 dark:focus:border-zinc-500 focus:outline-none focus:ring-0 focus:border-zinc-600 peer"
+                            placeholder=" " required />
+                        <label for="floating_email"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-zinc-600 peer-focus:dark:text-zinc-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
+                            address</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="text" name="Message" id="small-input"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-zinc-800 dark:border-gray-600 dark:focus:border-zinc-500 focus:outline-none focus:ring-0 focus:border-zinc-600 peer"
+                            placeholder=" " required />
+                        <label for="small-input"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-zinc-600 peer-focus:dark:text-zinc-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Subject
+                        </label>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-easing="linear"
+                    class="flex justify-center sm:pt-8">
+                    <div
+                        class="w-auto group flex items-center border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                        <img class="h-4 w-auto group-hover:rotate-[45deg] ease-in-out duration-700"
+                            src="/assets/images/send-message-icon.png" alt="">
+                        &nbsp; &nbsp;
+                        <a href="#sectionProject">Send Message</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section> -->
+
+    <!-- Updated About Me Page Part III -->
+    <section class="h-full lg:h-screen w-screen bg-gradient-to-t from-linearDark to-linearLight lg:mb-0">
+        <div id="sectionAbout" class="justify-center h-full w-full bg-overlay text-center">
+            <div
+                class="h-full w-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-9 gap-8 mx-auto px-4 lg:px-48 items-center">
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                 class="col-span-3">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="flex justify-start">
+                        <img class="h-8 w-auto animate-pulse opacity-60" src="/assets/images/spiral-icon.png" alt="">
+                    </div>
+                    <br>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="text-4xl text-left font-bold">
+                        <h1>Sandesh</h1>
+                        <h1>Subedi</h1>
+                    </div>
+                    <br>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="text-base text-left font-normal">
+                        <p>Born where mountains kiss the sky,<br>raised amidst the tranquility of Pokhara's lakes-Nepal,
+                            the
+                            essense of my story. <br><br> Passionate about bridging the gap between humans and
+                            technology, I'm an HCI enthusiast orchestrating pixels into poetry.</p>
+                    </div>
+                    <br>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="flex justify-start pt-2">
+                        <div
+                            class="w-auto group flex items-center border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                            <img class="h-4 w-auto group-hover:rotate-[45deg] ease-in-out duration-700"
+                                src="/assets/images/explore-icon.png" alt="">
+                            &nbsp; &nbsp;
+                            <a href="/src/page_not_found.html">Explore my story</a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                 class="col-span-3 lg:h-full flex items-center overflow-hidden">
+                    <img src="/assets/convocation/Solo-09 2.svg" alt="" class="rounded-sm scale-125">
+                    <!-- <img src="/assets/convocation/Solo-09 2.svg" alt="" class="rounded-sm scale-125 hover:scale-100 transition-all duration-1000 ease-in-out"> -->
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="col-span-3 mb-16 lg:mb-0 mx-auto">
+                    <div class="text-2xl text-start font-semibold">
+                        Educational Background
+                    </div>
+                    <br> <br>
+                    <!-- Asia Pacific University Info  -->
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                     class="flex justify-start items-center">
+                        <img class="h-8 w-auto" src="/assets/images/apu-logo.png" alt="">
+                        &nbsp; &nbsp;
+                        <div class="text-left leading-snug">
+                            <a href="https://infomaxcollege.edu.np/" target="_blank">
+                                <h1 class="text-base font-medium">Asia Pacific University</h1>
+                            </a>
+                            <p class="text-sm text-slate-500">2019-2023</p>
+                        </div>
+                    </div>
+                    <br><br>
+                    <!-- Balodaya Info  -->
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                     class="flex justify-start items-center">
+                        <img class="h-8 w-auto" src="/assets/images/balodaya-logo.png" alt="">
+                        &nbsp; &nbsp;
+                        <div class="text-left leading-snug">
+                            <a href="https://bebs.edu.np/" target="_blank">
+                                <h1 class="text-base font-medium">Balodaya Secondary School</h1>
+                            </a>
+                            <p class="text-sm text-slate-500">2011-2018</p>
+                        </div>
+                    </div>
+                    <br><br>
+                    <!-- Buds Academy  -->
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="flex justify-start items-center">
+                        <img class="h-8 w-auto" src="/assets/images/buds-academy-logo.png" alt="">
+                        &nbsp; &nbsp;
+                        <div class="text-left leading-snug">
+                            <a href="https://www.facebook.com/p/Buds-Academy-100054364157563/" target="_blank">
+                                <h1 class="text-base font-medium">Buds Academy</h1>
+                            </a>
+                            <p class="text-sm text-slate-500">2008-2011</p>
+                        </div>
+                    </div>
+                    <br><br>
+                    <!-- Shining Star Info  -->
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="flex justify-start items-center">
+                        <img class="h-8 w-auto" src="/assets/images/shining-star-logo.png" alt="">
+                        &nbsp; &nbsp;
+                        <div class="text-left leading-snug">
+                            <a href="https://www.shiningstar.edu.np/index.html" target="_blank">
+                                <h1 class="text-base font-medium">Shining Star H. S. B. School</h1>
+                            </a>
+                            <p class="text-sm text-slate-500">2004-2008</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section class="h-full lg:h-screen w-screen bg-gradient-to-b from-linearDark to-linearLight lg:mb-0">
+        <div id="sectionProject" class="justify-center h-full w-full bg-overlay text-center">
+            <form class="w-auto px-16 mx-auto">
+                <div class="grid md:grid-cols-3 md:gap-6">
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="text" name="floating_first_name" id="floating_first_name"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-zinc-800 dark:border-gray-600 dark:focus:border-zinc-500 focus:outline-none focus:ring-0 focus:border-zinc-600 peer"
+                            placeholder=" " required />
+                        <label for="floating_first_name"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-zinc-600 peer-focus:dark:text-zinc-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Full
+                            name</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="email" name="floating_email" id="floating_email"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-zinc-800 dark:border-gray-600 dark:focus:border-zinc-500 focus:outline-none focus:ring-0 focus:border-zinc-600 peer"
+                            placeholder=" " required />
+                        <label for="floating_email"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-zinc-600 peer-focus:dark:text-zinc-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
+                            address</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="text" name="Message" id="small-input"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-zinc-800 dark:border-gray-600 dark:focus:border-zinc-500 focus:outline-none focus:ring-0 focus:border-zinc-600 peer"
+                            placeholder=" " required />
+                        <label for="small-input"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-zinc-600 peer-focus:dark:text-zinc-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Subject
+                        </label>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-easing="linear"
+                    class="flex justify-center sm:pt-8">
+                    <div
+                        class="w-auto group flex items-center border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                        <img class="h-4 w-auto group-hover:rotate-[45deg] ease-in-out duration-700"
+                            src="/assets/images/send-message-icon.png" alt="">
+                        &nbsp; &nbsp;
+                        <a href="#sectionProject">Send Message</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section> -->
+
+    <!-- Contact Section  -->
+    <section class="h-auto w-screen bg-gradient-to-b from-linearDark to-linearLight lg:mb-0">
+        <div id="sectionProject" class="justify-center h-full w-full bg-overlay text-center">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="py-12 lg:pt-20 lg:pb-16">
+                <h1 class="text-4xl font-semibold leading-normal">Your Message Matters</h1>
+                <span class="text-base leading-loose">My inbox is always open for those committed to
+                    transforming visions</span>
+            </div>
+            <form data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="w-auto px-16 mx-auto">
+                <div class="grid md:grid-cols-3 md:gap-6">
+                    <div class="relative z-0 w-full mb-10 group flex flex-col items-center">
+                        <input type="text" name="floating_first_name" id="floating_first_name"
+                            class="block py-2.5 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-zinc-800 dark:border-gray-600 dark:focus:border-zinc-500 focus:outline-none focus:ring-0 focus:border-zinc-600 peer"
+                            placeholder=" " required />
+                        <label for="floating_first_name"
+                            class="peer-focus:font-medium absolute text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0]">Full
+                            name</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-10 group flex flex-col items-center">
+                        <input type="email" name="floating_email" id="floating_email"
+                            class="block py-2.5 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-zinc-800 dark:border-gray-600 dark:focus:border-zinc-500 focus:outline-none focus:ring-0 focus:border-zinc-600 peer"
+                            placeholder=" " required />
+                        <label for="floating_email"
+                            class="peer-focus:font-medium absolute text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0]">Email
+                            address</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-10 group flex flex-col items-center">
+                        <input type="text" name="Message" id="small-input"
+                            class="block py-2.5 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-zinc-800 dark:border-gray-600 dark:focus:border-zinc-500 focus:outline-none focus:ring-0 focus:border-zinc-600 peer"
+                            placeholder=" " required />
+                        <label for="small-input"
+                            class="peer-focus:font-medium absolute text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0]">Subject
+                        </label>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-easing="linear"
+                    class="flex justify-center sm:pt-8">
+                    <div
+                        class="w-auto group flex items-center border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                        <img class="h-4 w-auto group-hover:rotate-[45deg] ease-in-out duration-700"
+                            src="/assets/images/send-message-icon.png" alt="">
+                        &nbsp; &nbsp;
+                        <a href="/src/page_not_found.html">Send Message</a>
+                    </div>
+                </div>
+            </form>
+            <br> <br> <br>
+        </div>
+    </section>
+
+
+    <!-- Gallery page  -->
+    <!-- <section class="h-full w-screen bg-gradient-to-t from-linearDark to-linearLight">
+        <div id="sectionECA" class="h-full w-full bg-overlay text-center">
+
+            <div class="pt-32 md:pt-8 pb-8 md:pb-12">
+                <h1 class="text-4xl font-semibold leading-normal">Gallery</h1>
+                <span class="text-base leading-loose">My Coding Ventures, Design Sagas, Prose Epics, and Penning
+                    Insights</span>
+            </div>
+
+            <div class="h-full grid grid-cols-1 sm:grid-cols-2 gap-x-4 lg:grid-cols-4 mx-8 md:mx-16 lg:mx-52">
+                <div class="grid grid-gap-4">
+                    <div class="pb-2">
+                        <img class="h-auto max-w-full rounded-lg" src="/assets/images/gallery-img-1.JPG" alt="">
+                    </div>
+                    <div class="hidden sm:flex pt-2">
+                        <img class="max-h-full max-w-full rounded-lg" src="/assets/images/gallery-img-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="grid grid-gap-4 gap-y-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="/assets/images/IMG_3972.jpeg" alt="">
+                    </div>
+                    <div class="hidden sm:flex">
+                        <img class="h-full max-w-full rounded-lg" src="/assets/images/gallery-img-4.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="grid grid-gap-4 gap-y-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="/assets/images/gallery-img-5.jpg" alt="">
+                    </div>
+                    <div class="hidden sm:flex">
+                        <img class="h-auto max-w-full rounded-lg" src="/assets/images/gallery-img-4 copy.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="grid grid-gap-4 gap-y-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="/assets/images/gallery-img-6.jpeg" alt="">
+                    </div>
+                    <div class="hidden sm:flex">
+                        <img class="h-auto max-w-full rounded-lg" src="/assets/images/gallery-img-8.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-8 pb-24 md:mb-0">
+                <div
+                    class="w-auto group flex items-center border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                    <img class="h-4 w-auto group-hover:rotate-[320deg] ease-in-out duration-700"
+                        src="/assets/images/more-icon.png" alt="">
+                    &nbsp;
+                    <a href="#sectionProject">View More Images</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer Section -->
+    <section class="h-full w-screen bg-zinc-700 z-10">
+        <div id="sectionFooter" class="z-10 block justify-center items-start h-full w-full bg-overlay text-center py-8">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mx-4 md:mx-16 lg:mx-40 text-center md:text-left items-center md:items-start">
+                <div class="grid grid-flow-row text-green-50 gap-2 my-8 md:my-0">
+                    <div class="flex justify-center md:justify-start animate-pulse">
+                        <img class="h-12 w-auto" src="/assets/images/web-logo.svg" alt="">
+                    </div>
+                    <h1 class="text-lg font-medium">Sandesh Subedi</h1>
+                    <p class="opacity-70 text-base font-normal">UI/UX & Front-end Developer</p>
+                    <p class="opacity-70 text-sm font-light">Copyright &copy; 2024 Sandesh Subedi.</p>
+                    <p class="opacity-70 text-sm font-light">All Rights Reserved.</p>
+                </div>
+                <div class="grid grid-flow-row gap-1 text-green-50 justify-center my-8 md:my-0">
+                    <h1 class="text-lg font-medium pb-2">Links</h1>
+                    <div class="grid grid-flow-row text-center lg:text-left text-sm items-start gap-1">
+                        <a class="opacity-70 hover:opacity-100 ease-in-out duration-300"
+                            href="#sectionProject">Projects</a>
+                        <a class="opacity-70 hover:opacity-100 ease-in-out duration-300" href="#sectionHome">Resume</a>
+                        <a class="opacity-70 hover:opacity-100 ease-in-out duration-300" href="/src/page_not_found.html">Blogs</a>
+                        <a class="opacity-70 hover:opacity-100 ease-in-out duration-300" href="./docs_and_articles.html"
+                            target="_blank">Articles</a>
+                        <a class="opacity-70 hover:opacity-100 ease-in-out duration-300" href="/src/page_not_found.html"
+                            target="_blank">Gallery</a>
+                        <a class="opacity-70 hover:opacity-100 ease-in-out duration-300" href="#sectionAbout">About
+                            Me</a>
+                    </div>
+                </div>
+                <div class="grid grid-flow-row gap-1 text-green-50 justify-center my-8 md:my-0">
+                    <h1 class="text-lg font-medium pb-2">Info</h1>
+                    <div class="grid grid-flow-row text-center lg:text-left text-sm items-start gap-1">
+                        <a class="opacity-70 hover:opacity-100 ease-in-out duration-300" href="#sectionAbout"
+                            >Education</a>
+                        <a class="opacity-70 hover:opacity-100 ease-in-out duration-300"
+                            href="#sectionExperience">Work</a>
+                        <a class="opacity-70 hover:opacity-100 ease-in-out duration-300" href="#sectionAbout"
+                            >Interests</a>
+                        <a class="opacity-70 hover:opacity-100 ease-in-out duration-300" href="./courses_and_eca.html"
+                            target="_blank">ECAs</a>
+                    </div>
+                </div>
+                <div class="grid grid-flow-row gap-1 text-green-50 justify-center my-8 md:my-0">
+                    <h1 class="text-lg font-medium pb-2">Contact</h1>
+                    <div class="grid grid-flow-row gap-3 text-left opacity-70 text-sm">
+                        <div class="flex justify-center lg:justify-start items-center gap-1">
+                            <img class="h-[10px] w-auto" src="/assets/images/mail.png" alt="">
+                            <a class="leading-noLineHeight opacity-70 hover:opacity-100 ease-in-out duration-300"
+                                href="mailto:sandeshsubedi345@gmail.com" target="_blank">Mail</a>
+                        </div>
+                        <div class="flex justify-center lg:justify-start items-center gap-1">
+                            <img class="h-[10px] w-auto" src="/assets/images/linkedin.png" alt="">
+                            <a class="leading-noLineHeight opacity-70 hover:opacity-100 ease-in-out duration-300"
+                                href="https://www.linkedin.com/in/sandesh-s11/" target="_blank">Linkedin</a>
+                        </div>
+                        <div class="flex justify-center lg:justify-start items-center gap-1">
+                            <img class="h-[10px] w-auto" src="/assets/images/github-sign.png" alt="">
+                            <a class="leading-noLineHeight opacity-70 hover:opacity-100 ease-in-out duration-300"
+                                href="https://github.com/SandeshKey" target="_blank">Github</a>
+                        </div>
+                        <div class="flex justify-center lg:justify-start items-center gap-1">
+                            <img class="h-[10px] w-auto" src="/assets/images/figma-logo.png" alt="">
+                            <a class="leading-noLineHeight opacity-70 hover:opacity-100 ease-in-out duration-300"
+                                href="https://www.figma.com/files/user/1028297288546237086?fuid=1028297288546237086"
+                                target="_blank">Figma</a>
+                        </div>
+                        <div class="flex justify-center lg:justify-start items-center gap-1">
+                            <img class="h-[10px] w-auto" src="/assets/images/instagram-icon.png" alt="">
+                            <a class="leading-noLineHeight opacity-70 hover:opacity-100 ease-in-out duration-300"
+                                href="https://www.instagram.com/sandesshhh/" target="_blank">Instagram</a>
+                        </div>
+                        <div class="flex justify-center lg:justify-start items-center gap-1">
+                            <img class="h-[10px] w-auto" src="/assets/images/facebook.png" alt="">
+                            <a class="leading-noLineHeight opacity-70 hover:opacity-100 ease-in-out duration-300"
+                                href="https://www.facebook.com/sandesh.key77/" target="_blank">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

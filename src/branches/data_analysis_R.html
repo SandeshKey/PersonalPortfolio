@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hourly Weather Analysis with R Programming</title>
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="./main.js">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="/assets/images/fav-icon.ico">
+</head>
+
+<body class="h-full w-screen mx-auto bg-linearLight font-firaCon" oncontextmenu="return false" onmousedown="return false" onselectstart="return false">
+
+    <!-- Title Section  -->
+    <section data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="h-full w-screen font-firaCon">
+        <div class="h-screen w-screen px-8 sm:px-32 lg:px-60 text-center grid justify-center items-center">
+            <div>
+                <p class="footnote-text">R Programming for Data Analysis</p>
+                <h1 class="heading-1-text">Hourly Weather Analysis</h1>
+                <h2 class="subtitle-text">a data analysis project</h2>
+            </div>
+            <div class="text-sm font-medium opacity-50">
+                <p>Sandesh Subedi</p>
+                <p>February, 2022</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Section  -->
+    <section class="h-full w-screen font-firaNormal">
+        <div class="h-full w-screen px-8 sm:px-32 lg:px-60 text-justify">
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text">Abstract
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                In this project, data analysis is done, using a dataset named ‘Hourly Weather
+                Data’. The dataset provides weather information about two different airports in the USA :
+                John F. Kennedy (JFK) and LaGuardia Airport (LGA). It consists of 15 columns and
+                about 17,412 rows in total. Based on ‘R Programming’, the provided set of data is
+                explored, manipulated, and analyzed in detail. Necessary data packages are imported
+                along with significant functions, which helped in studying the dataset enormously.
+                The provided set of data is pre-processed in such a way that it provides quality results during
+                analysis. A total of 16 weather analysis is done in the project, including two additional
+                features.
+                <br><br>
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text">Analysis &
+                Outcome
+            </h1>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Analysis 01 : Analyzing Dew Point against Humidity using Scatterplot
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A1.png" alt="Scatterplot produced between dew point and humidity">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Scatterplot produced between dew point and humidity</p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Analysis 02 : Analyzing snowfall based on temperature, using box plot
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A2.png" alt="Box plots of snowfall based on airport temperature">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Box plots of snowfall based on airport temperature
+            </p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Analysis 03 : Analyzing Average Pressure at both airports for each month
+                using Line Graph
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A3.png"
+                alt="Line graph of average pressure in JFK and LGA airports">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Line graph of average pressure in JFK and LGA airports
+            </p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Analysis 04 : Analyzing relation between Temperature and Wind Gust using
+                Regression Equation Line
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A4.png" alt="Regression Equation Line of wind gust and temperature">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Regression Equation Line of wind gust and temperature
+            </p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Analysis 05 : Comparing dew point of each months for JFK and LGA using
+                Bar plot
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A5.png"
+                alt="Bar plot graph of dew points in both airports (JFK and LGA - 2013)">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Bar plot graph of dew points in both airports (JFK and LGA - 2013)
+            </p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Analysis 06 : Analyzing Humidity distribution in Weather Data using
+                Histogram
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A6.png"
+                alt="Histogram of humidity throughout the year (JFK and LGA - 2013)">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Histogram of humidity throughout the year (JFK and LGA - 2013)
+            </p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Analysis 07 : Analyzing rainy days throughout the year in both airports using
+                scatterplot
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A7.png"
+                alt="Scatterplot displaying number of rainy days (JFK and LGA - 2013)">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Scatterplot displaying number of rainy days (JFK and LGA - 2013)
+            </p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Analysis 08 : Line Chart of Average Temperature by month in JFK and LGA
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A8.png"
+                alt="Line Graph displaying average values by month (JFK and LGA - 2013)">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Line Graph displaying average values by month (JFK and LGA - 2013)
+            </p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Analysis 09: Analyzing weather humidity according to snowfall using bar plot
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A9.png" alt="Bar Graph displaying humidity based on snowfall">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Bar Graph displaying humidity based on snowfall
+            </p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Analysis 10 : Predicting snowfall in both airports using jitter scatterplot
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A10.png"
+                alt="Scatterplot predicting snowfall in JFK and LGA airports">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Scatterplot predicting snowfall in JFK and LGA airports
+            </p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Analysis 11 : Line chart to analyze airport visibility in JFK and LGA in 2013
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A11.png"
+                alt="Line Graph displaying airport visibility throughout the air (2013)">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Line Graph displaying airport visibility throughout the air (2013)
+            </p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Analysis 12: Polar Bar Chart of Wind Direction Distribution in JFK and LGA
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A12.png"
+                alt="Polar Bar Graph displaying wind direction throughout the air (2013)">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Polar Bar Graph displaying wind direction throughout the air (2013)
+            </p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Analysis 13 : Analyzing the effect of wind speed and wind direction towards
+                flights (JFK airport)
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A13.png"
+                alt="Box plot graph displaying the effect of wind speed and direction towards flight">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Box plot graph displaying the effect of wind speed and direction towards flight
+            </p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Analysis 14 : Analyzing humidity details of both airports in year 2013 using
+                box plots
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A14.png"
+                alt="Whisker diagram displaying humidity information (JFK and LGA - 2013)">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Whisker diagram displaying humidity information (JFK and LGA - 2013)
+            </p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Extra Feature 01 : Using hexagonal bins to analyze relationship between
+                humidity and wind speed
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A15.png"
+                alt="Hexagonal bins displaying relationship between pressure and wind speed">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Hexagonal bins displaying relationship between pressure and wind speed
+            </p>
+            <br> <br>
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text">
+                Extra Feature 02 : Analyzing average humid density per hour using density
+                graph
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Data Analysis R/A16.png" alt="Density Graph displaying the average humid density">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">
+                Density Graph displaying the average humid density
+            </p>
+            <br> <br>
+
+
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="flex items-center justify-center">
+                <img class="h-4 w-auto" src="/assets/images/rotated-right-arrow-dark-icon.png" alt="">
+                <span class="text-sm">
+                    &nbsp; &nbsp; To understand the project in detail, please read the project documentation or view
+                    source code.
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+
+    <!-- Downloads and Links  -->
+    <div class="md:flex justify-center">
+        <div class="flex justify-center mt-16 pb-24 md:mb-0 mx-2">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto group flex border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                <img class="w-auto h-5 group-hover:rotate-[-20deg] ease-in-out duration-700"
+                    src="/assets/images/pdf-icon.png" alt="">
+                &nbsp;
+                <a href="https://infomaxcollege-my.sharepoint.com/:b:/g/personal/sandeshsubedi_1909it_infomaxcollege_edu_np/EQTvvxf6L_VEqfaHv7zhSz0BbwTfUr-QqxViQpZAvaOsrA?e=FH0Npp"
+                    download="R Programming for Data Analysis - Document" target="_blank">Download PDF</a>
+            </div>
+        </div>
+        <div class="flex justify-center mt-16 pb-24 md:mb-0 mx-2">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto group flex border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                <img class="w-auto h-5 group-hover:rotate-[-20deg] ease-in-out duration-700"
+                    src="/assets/images/ppt-icon.png" alt="">
+                &nbsp;
+                <a href="https://infomaxcollege-my.sharepoint.com/:b:/g/personal/sandeshsubedi_1909it_infomaxcollege_edu_np/EaRxZHK-JjVCry0cUgApFUYBu0ae78nibHctdFVCkJGiUw?e=JVBumE"
+                    download="R Programming for Data Analysis PPT" target="_blank">Download
+                    PPT</a>
+            </div>
+        </div>
+        <div class="flex justify-center mt-16 pb-24 md:mb-0 mx-2">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto group flex border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                <img class="w-auto h-5 group-hover:rotate-[-20deg] ease-in-out duration-700"
+                    src="/assets/images/source-code-icon.png" alt="">
+                &nbsp;
+                <a href="https://github.com/SandeshKey/Hourly-Weather-Analysis-with-R-Programming" target="_blank">View
+                    Source Code</a>
+            </div>
+        </div>
+    </div>
+
+    <p class="footnote-text flex justify-center items-end pb-40">Created with love by &nbsp;
+        <a class="font-semibold underline" href="https://www.linkedin.com/in/sandesh-s11/" target="_blank">
+            <img class="h-8 w-auto cursor-pointer animate-pulse" src="/assets/images/Logo-Black.png" alt="">
+        </a>
+        &nbsp;
+    </p>
+
+    <!-- AOS Link  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>

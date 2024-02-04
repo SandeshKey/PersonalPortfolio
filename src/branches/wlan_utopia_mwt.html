@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploying WLAN at Utopia Tech</title>
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="./main.js">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="/assets/images/fav-icon.ico">
+</head>
+
+<body class="h-full w-screen mx-auto bg-linearLight font-firaCon font-light text-sm md:font-normal md:text-base" oncontextmenu="return false" onmousedown="return false" onselectstart="return false">
+
+    <!-- Title Section  -->
+    <section data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="h-full w-screen font-firaCon">
+        <div class="h-screen w-screen px-8 sm:px-32 lg:px-60 text-center grid justify-center items-center">
+            <div>
+                <p class="footnote-text">Mobile & Wireless Technology</p>
+                <h1 class="heading-1-text">Deploying WLAN at Utopia Tech</h1>
+                <h2 class="subtitle-text"></h2>
+            </div>
+            <div class="text-sm font-medium opacity-50">
+                <p>Sandesh Subedi</p>
+                <p>August, 2021</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Section  -->
+    <section class="h-full w-screen font-firaNormal">
+        <div class="h-full w-screen px-8 sm:px-32 lg:px-60 text-justify">
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text">Abstract
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The prime objective of this project is to deploy a wireless LAN (Local Area
+                Network) in a SOHO ambiance. As a network consultant, the goal is to administer an appropriate
+                resolution for an IT company named Utopia Tech. Utopia is a SO(Small Office), established
+                to provide gratifying assistance to clients utilizing advanced & innovative
+                technology in every possible way. This report about WLAN infrastructure design incorporates
+                details about the site survey, utilization of site survey tools, designs, justifications, and
+                consideration
+                of hardware, software, and other ample information. Likewise, the project further comprises
+                security requirements during the WLAN deployment along with crucial features like reliability,
+                scalability, and easily maintainable for future use. Scant obstacles during the process are carefully
+                taken care of and appropriate actions are taken to avoid them from the deployment
+                process. </p>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                1. Introduction
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Internet, also known as ‘Net’ is a globally connected wide area network system that permits
+                users to communicate and access the required data from anywhere around the globe. The Internet,
+                being so powerful, draws people within it for some kind of interaction. From logging on to a
+                social newsfeed to being updated or with expectations of sociability, the internet is an indispensable
+                part
+                of one’s life (Porter, 1997). All these connections are provided in multiple forms which also
+                includes Wireless Network. Wireless network is further broadly divided into four major types:
+                Wireless PAN, Wireless LAN, Wireless MAN, and Wireless WAN.
+            </p>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                1.1 Background
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                WLAN, also known as Wireless Local Area Network is a wireless communication that
+                uses high-frequency infrared radio waves, to establish connections between devices or to
+                convey data from one point to another, without wired cables. The foremost aim is to deploy a
+                wireless LAN on the premises of Utopia Tech. This is to ensure that staff and visitants can access
+                strong internet communication along with the required software. So, the site survey is conducted
+                By applying requisite tools, and the selection of hardware and software is recommended with applicable
+                justification.
+            </p>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                1.2 Assumptions
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                During the analysis and deployment study process, the following assumptions were put together for
+                Utopia Tech : <br>
+            </p>
+            <br>
+            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" style="list-style-type: disc;">
+                <li> The area of Utopia Tech is estimated to be around 1800 square feet
+                </li>
+                <br>
+                <li> The office is located at the distance of 45km from Pokhara Metropolitan City
+                </li>
+                <br>
+                <li> There are total of four rooms which includes lobby and reception area
+                </li>
+                <br>
+                <li> Currently, 12 employees work in Utopia Tech. Everyone working in the office as well
+                    as guests are to be provided with the network access
+                </li>
+                <br>
+            </ul>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                1.3 Project Scopes & Limitations
+            </h1> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                Project Scopes
+            </h1> <br>
+            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" style="list-style-type: disc;">
+                <li> Implementation of WLAN Network with conduction of site survey and selection of
+                    appropriate hardware and softwares
+                </li>
+                <br>
+                <li> To establish easy way of communication in between departments and with co-offices
+                </li>
+                <br>
+                <li> Customers and staffs can be facilitated with mobile and swift internet connection for
+                    their work
+                </li>
+                <br>
+            </ul>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                Project Limitations
+            </h1> <br>
+            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" style="list-style-type: disc;">
+                <li> Occasionally, environmental intrusions also fabricate barriers in network connection
+                </li>
+                <br>
+                <li> Undesignated Budget for the project create doubts while choosing the appropriate
+                    hardwares and softwares
+                </li>
+                <br>
+            </ul>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                2. WLAN Site Survey
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                To acquire the required information, a physical survey of the site territory is conducted.
+                This is called a site survey. A standard wireless device with testing tools is used to examine
+                coverage, propagation and factual performance of WLAN network(ZVANOVEC et al.,2003).
+                Moreover, site survey conduction helps spot interference which further intercepts,
+                The confinement of radio frequency. A formal interview is conducted to gather data and suitable
+                placement of cables, access points, and other appliances is studied. As per the recommendation of
+                Cisco, relevant knowledge of IEEE 802.11 Wireless and Wireless LAN Design is advantageous
+                in conducting an effective site survey.
+            </p>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.1 Site Survey (Types and Process)
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                There are three major types of wireless site surveys: passive surveys, active surveys and
+                predictive surveys.
+            </p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                1. <b>Passive Survey: </b>This is the type of site survey that is performed in listening mode.
+                The application passively pays attention to WLAN traffic and discovers the level of noise, signal
+                stability, and functional access points.
+            </p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                2. <b>Active Survey: </b>This is the type of site survey where wireless adapters are linked with
+                access points, to take measurements of throughput rates, retransmissions, packet loss
+                and other crucial details.
+            </p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                3. <b>Predictive Survey: </b>This is the type of site survey where the RF environment is created
+                without any on-site computation.
+            </p>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                Comparison between Site Survey methods
+            </h1> <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="h-auto lg:h-[720px] w-auto content-center mx-auto px-4 rounded-md"
+                src="/assets/images/MWT Utopia/Site survey comparision.png"
+                alt="Comparison between types of wireless survey">
+            <br> <br>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.2 Requirement Elicitation
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Requirement elicitation is an investigative process of accumulating essential data with
+                continual interactions with relevant stakeholders. The process includes genuine exploration and
+                documentation of information that clarifies what the project demands for its realization. With
+                effectual interaction with end users and stakeholders, requirements are gathered about
+                what and how the project should come into execution. Moreover, requirement elicitation also
+                results in evident functional requirements of the project.
+                Depending upon the condition and type of projects, several methods can be
+                used to collect information from relevant users, clients, and stakeholders. Requirement gathering
+                are performed in the following ways:
+            </p>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.2.1 Business Requirements
+            </h1>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                Stakeholders Requirements
+            </h1>
+            <br>
+            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" style="list-style-type: disc;">
+                <li> The deployment planning should be economically and practically feasible
+                </li>
+                <br>
+                <li> There should be no complaints about network connectivity from employees or clients
+                </li>
+                <br>
+                <li> The deployed hardwares / softwares should be scalable
+                </li>
+                <br>
+            </ul>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                Functional & Non-functional Requirements
+            </h1> <br>
+            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" style="list-style-type: disc;">
+                <li> The WLAN system should be efficient and support high number of nodes
+                </li>
+                <br>
+                <li> The deployed system should cover all office with strong internet connection
+                </li>
+                <br>
+                <li> The deployed WLAN must be highly secured from any possible threats
+                </li>
+                <br>
+                <li> WLAN policies should be enforced to make connection safe for users
+                </li>
+                <br>
+            </ul>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.2.2 Interviewing Stakeholders
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                In order to acquire more guidance, direction and assemble additional requirements, an
+                interview including questionnaire is conducted with employees and clients. The figure below
+                displays few questionnaires which are asked while interview process.
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="h-auto lg:h-[720px] w-auto content-center mx-auto px-4 rounded-md"
+                src="/assets/images/MWT Utopia/ss qus.png" alt="Site Survey Questionnaires">
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.2.3 Determining Physical & Data Security Requirements
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                When the usage of network increases, security requirements are to be upgraded as well.
+                Both, physical as well as data security are crucial in order to use the network with reliability and
+                without inconveniences.
+            </p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Issues within Radio Frequency, such as freezing and detachment of connection between
+                devices must be carefully studied. Shielding constituents with metal or glass wares can solve
+                physical security complications. Likewise, for data security, transmission of data must be sealed
+                and unambiguous, which can be done with different virtual network technologies.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.3 Site Survey Types (Analysis and Recommendation)
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                After all the obtainable requirements are gathered, a feasibility study is conducted in order
+                to analyze the most effective and appropriate method of site survey.
+            </p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Regarding technical feasibility, active site surveys are found to be the most advanced. Precise
+                measurement of signal propagation and radio frequency makes this process effectual, as it covers
+                contents like walls, furniture, ducts, and other influential elements. Similarly, in terms of
+                operational feasibility, an active site survey is pretty efficient as it computes real throughput rates
+                and performance of every access point placement. In contrast, the economical feasibility
+                determines the passive survey to be the most economical one as it requires little manpower and is easy
+                to conduct among all three types. Predictive surveys can be commanding when there are
+                complications in accessing the site location(Sauter, 2018).
+            </p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Out of all three types of site surveys (Passive Survey, Active Survey, and Predictive Survey),
+                the chosen type is Active Site Survey. This is because an active survey provides precise statistics
+                about performance for every access point and guarantees the installation process. Moreover,
+                despite being labor intensive, active site survey requires very few number attempts to conduct
+                the site survey process.
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.4 Current Site Design and Details
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                As a network consultant, a well planned process is required in order to implement the
+                WLAN Network effectually. For this, a comprehensive study is done by constructing an
+                appropriate design, where all the requisite factors are considered.
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.4.1 Physical Location & Characteristics
+            </h1>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                Floor Plan of Utopia Tech
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                While studying the floor plan of Utopia SOHO circumstances, several barriers that affect
+                which affects wireless signals are discovered. Generally, physical obstacles are supposed to
+                cause excessive interferences, having an impact on network coverage, standards, and eventually on
+                performances. Frequency is measured using frequency bands of certain ranges and essential
+                rectifications are done.
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="h-auto lg:h-[540px] w-auto content-center mx-auto px-4 rounded-md"
+                src="/assets/images/MWT Utopia/floor plan.png" alt="Floor Plan">
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.4.2 Obstacles within the Site
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-64 content-center mx-auto px-4 rounded-md" src="/assets/images/MWT Utopia/obstacle.png"
+                alt="Obstacles">
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.4.3 Intended Users
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                WLAN Network in Utopia Tech is intended for both staff as well as customer usage. To develop a mutual
+                relationship with clients and audiences, employees can use email and
+                social media platforms with network availability. It will also be accustomed to managing reports
+                and the company’s finances through applications like Freshbooks and Wave Accounting. Similarly,
+                clients who visit office premises will also be facilitated with WLAN Network for their amenity.
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-48 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/MWT Utopia/Intended suers.png" alt="Intended Users">
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.4.4 WLAN Standards and Consideration
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Among 1100 or even more operative Wi-Fi standards maintained by IEEE, the 802.11
+                series standard is studied in detail, as it comprises every LAN (WLANs) and MAN
+                standards(Notes, 2019). There are other handful of standards which include, 802.11a,
+                802.11b, 802.11g, 802.11n and 802.11p. A comparison between a few of the considerable standards
+                is demonstrated below:
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/MWT Utopia/wlan standards.png" alt="WLAN Standards">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Observing all available wireless standard variations, the recommended one is the IEEE
+                802.11ac. One of the foremost motives for choosing this particular IEEE standard is because of its
+                broad acceptance proportion among devices like routers and modems. The use of Multi-User MIMO
+                in 802.11ac enhances the network potentiality while its modulation ventures bring 33%
+                inclination in data ratio. Furthermore, 802.11ac provides more than thrice the pace of 802.11n
+                and operates extensive bandwidth which ranges in-between 80MHz - 160MHz (Advantages of
+                802.11ac | Disadvantages of 802.11ac, 2019).
+            </p>
+            <br>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                2.4.4.1 Antennas
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Antennas are crucial components of a WLAN system, that uses converted electrical signals to
+                facilitate wireless signals. The transferring and receiving antennas presented in wireless devices
+                transform EM packets into electrical signals.
+                <br> <br>
+                Wi-Fi antennas are categorized into 2 major types: <b>Omnidirectional</b> and <b>Directional</b>. After
+                studying both of them, the chosen antenna for our site is <b>Ceiling Dome Antennas</b>.
+                This is because the office will have devices like laptops, PCs, and printers in use and also there
+                will be other obstacles to create certain interference within the site. An appropriate location is
+                selected in the ceiling and the antenna is installed with the necessary measurements.˝
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.5 RF and Speed Considerations
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                During the deployment of a WLAN Network, the range and tempo of radio-frequency are
+                reckoned essential. Several factors play a part in the alteration of radio-frequency.
+                Apart from all those physical obstructions within the site, some other effectual factors are
+                specified below:
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.5.1 Coverage
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The WLAN Network coverage is one of the crucial parts to focus on during the deployment
+                process. It determines whether users can get sufficient network on their device to use the high level
+                standard connection. The area (size) of SOHO taken into consideration during the deployment
+                and required access points, signal strength, and data rate are studied to maintain
+                sufficient coverage within the building.
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.5.2 Applications to be used
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Utopia Tech, being a startup IT office will use several different applications with the intent
+                of facilitating staff as well as customers. However, some of the major applications that will be
+                used are :
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class=" w-auto md:h-96 content-center mx-auto px-4 rounded-md" src="/assets/images/MWT Utopia/apps.png"
+                alt="Applications to be Used">
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.5.3 Line of Sight
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                During WLAN deployment, the propagation of radio signals between transmitter and receiver is
+                considered to be significant. In Line of Sight, the transference occurs when both transmitter and
+                receiver are open without any barriers between them. However, in empirical life, this is pretty
+                much an unrealistic task, not just because of physical obstructions, but also because of natural
+                factors. There are generally two Line of Sight (LoS): Visual and Radio. Visual LoS refers that a
+                transmitter visualizing the receiver while Radio LoS refers to the transmission of radio signals
+                (CAPANO, 2021). During the deployment process, LoS between two stations is studied along
+                with the chosen router and any other selected devices. However since there are a lot of physical
+                obstructions within the site, Radio LoS can be considered as a superior option.
+
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.5.4 Interference
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Radio Frequency Interference (RFI) is the intrusion caused due to excessive radio spectrum
+                occupancy. RFI occurs because of the high amount of transmitters, monitors, or even amplifiers. This
+                causes disarrangements of connections during communication, mislaying of assistance as well as
+                detain in information throughput (Whitlock, 2020).
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="h-96 w-auto content-center mx-auto px-4 rounded-md" src="/assets/images/MWT Utopia/flagging.png"
+                alt=" Data Flagging Equipment (Innoo Tech, 2021)">
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure: Data
+                Flagging Equipment (Innoo Tech, 2021)</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Data flagging (RFI detection) is done on the site using an appropriate RFI detecter. For this
+                project, ‘Innoo Tech RFI Detector’ will be used considering its impressive agility and accuracy.
+                By focusing on appropriate routing without needless flooring and with hefty gauge cover wires,
+                interference within the cite area can be controlled.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                WLAN Interference
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The performance of the selected wireless standard (IEEE 802.11ac) is disrupted by other
+                networks as WLAN interference. Taking network IEEE 802.15 which encompasses IEEE 802.15.1
+                (Bluetooth), it distorts the performance of IEEE 802.11ac through the FHSS hops. While
+                Bluetooth embraces the whole 2.5 GHz band completely, IEEE 802.11ac on the other hand barely
+                surrounds half of the 2.5 GHz band. This creates a collision among the networks, which ultimately
+                plunges the performance of IEEE 802.11ac. Other than proximity or Bluetooth devices, there are
+                other sources of interference such as Microwave oven interference, Radio signals interference,
+                Cordless phone interference and so on (Cisco Press, 2015). <br> <br>
+                As a network consultant, appropriate measures are taken during the WLAN planning to avoid
+                these issues. Devices like microwave ovens and cordless phones will be kept away from Access
+                Points while wireless cameras should be located at an appropriate distance from WLAN devices to
+                avoid interference (Huawei Support, 2019).
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.5.5 Environment
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The environment is also one of the elements that affect network interference. There are a lot of
+                environmental factors that disrupt the WLAN performance. This involves reflection, diffraction,
+                scattering, refraction, and absorption. These factors hamper the radio frequency, amplitude,
+                bandwidth, and wavelength of a network. To avoid interference because of these environmental
+                problems, the placement of an Access Point in the site is planned in the appropriate position.
+                Furthermore,
+                minimization of the usage of glass or similar products might also aid in reducing the interference in
+                the site.
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                RF Justifications and Considerations
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                There are several things to be considered during the RF deployment process. Since the distance
+                between access points can give rise to disparity of throughput, the data standard of access points
+                must be kept in limit. Likewise, the way radiation can be determined is when end users test in
+                repeatedly.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                2.6 Site Survey Software
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The software used to conduct site surveys for Utopia is Ekahau Site Survey. Operating
+                efficiently for all network ranges, this software is supported both on Windows as well as Mac
+                OS. There are several features such as auto-detection of access points. that made us choose this
+                specific site survey tool. It would help to generate maximum performance from the network.
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="h-96 w-auto content-center mx-auto px-4 rounded-md" src="/assets/images/MWT Utopia/heat map.png"
+                alt="Heat map view of Site Survey">
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure: Heat
+                map view of Site Survey</p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                3. Hardware and Software Requirements
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                To achieve finest quality of internet facilities in Utopia tech, high quality hardwares and
+                softwares must be deployed, considering the financial limitation of the SOHO tech company. As
+                a network administrator, number of hardwares and software systems are recommended along
+                with relevant justifications.
+            </p>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                3.1 Recommended Hardwares
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                In terms of hardware, we have several networking devices such as routers, access points,
+                ethernet cables, wireless bridge and controller. Necessary comparisons are also done along with
+                their justifications.
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                3.1.1 Routers
+            </h1>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                Recommendation and Justification
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The recommended router for WLAN deployment in Utopia Tech is Synology RT2600ac. It
+                is a quality-rich router, supporting double WAN connectivity with MU-MIMO data streaming. It
+                is easy to install and distributes unbroken 2.4GHz and 5GHz throughput. The scalable RT2600ac
+                comes with business-grade protection and functions together to cover the surroundings, enlarging
+                the network availability in every corner of the office.
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md" src="/assets/images/MWT Utopia/router.png"
+                alt="Synology Router RT2600ac (Synology Inc., n.d.)">
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Synology Router RT2600ac (Synology Inc., n.d.)</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Supporting wireless type of 802.11ac, the RT2600ac facilitates with WPS2, WPA-PSK,
+                WPS, WPA2-PSK, and also WEP security protocol. The data transfer rate of this router is 1 GB/sec
+                and the voltage is about 120240 volts. Furthermore, the hardware has a surface coating of 7 traffic
+                authority and it also has a sharp connection for conversion between utmost range and speed. To
+                clarify the effectiveness of the chosen router, a spec comparison is also done with other available
+                options. This allows clients to see the difference between them clearly and have three say during
+                hardware selection.
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/MWT Utopia/router comp.png" alt=" Comparison of router functionalities">
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Comparison of router functionalities</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Looking at the comparison table, both Netgear RBK853 and Synology RT2600ac support
+                our recommended IEEE Standard (802.11ac). However, the price of Netgear RBK853 and ASUS
+                RT-AX88U is too much for a small SOHO. Therefore, with the provided justifications and the above
+                comparison, Synology RT2600ac is chosen as it seems to be a feasible option both technically
+                and financially.
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                3.1.2 Access Points
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                An access point is used in Utopia to connect routers with the help of ethernet cable so that
+                WLAN connection is available in the projected area. In Utopia Tech, access points are placed in
+                work station area, reception, and meeting room as well. Access points in the station will allow
+                developers to work in an environment having a strong internet connection. Likewise, according
+                to stakeholders, the meeting room usually hosts a high number of people on a regular basis. So, it can
+                be a place that might be advantageous to meeting attendees.
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                Recommendation and Justification
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                In terms of Access Points (AP) selection, Ubiquiti UniFi Pro 802.11ac is the recommended
+                one. This 1.75-pound scalable access point is comprised of a UniFi controller, that optimizes RF
+                performance for strong network connections. It is an 802.3af powered AP that is portable for both
+                indoor as well as outdoor operation along with weather resistance support. Likewise, it supports
+                the latest 802.11ac IEEE standard technology along with 3X3 MIMO tech that inclines antennas
+                for transmission and receiving to upgrade WLAN connectivity.
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-72 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/MWT Utopia/access points.png"
+                alt=" Ubiquiti UniFi Pro 802.11ac Access Point (telco.sydney, n.d.)">
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Ubiquiti UniFi Pro 802.11ac Access Point (telco.sydney, n.d.)</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The spectral analyses in Ubiquiti UniFi Pro gather feedback on the entire 5 GHZ while its
+                band steering drives users to quicker interferences. According to expert reviews, this is a hard AP
+                to deploy or set up. However, once the AP is set up by the network administrator, unlimited
+                scalabilities
+                are provided based on its software. It has 2 10/100/1000 ethernet ports and provides 1300 Mbps
+                with 5 GHz speed. Moreover, basic comparisons with other similar access points are given :
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class=" w-auto md:h-72 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/MWT Utopia/access point comp.png" alt="Comparison of Access Points functionalities">
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Comparison of Access Points functionalities</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Despite having almost identical functionalities to the other two access points, the Ubiquiti
+                UniFi Pro 802.11ac Access Point is available at a cheaper price compared to others. What’s more
+                , the company is currently providing warranties, that allow stakeholders to choose the device
+                without complications.
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                3.1.3 Cables
+            </h1>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                Recommendation and Justification
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The use of cables in our deployment process is to connect Access Point to the router. To set
+                up an Access Point, we can simply insert the cable into the LAN port of the router and connect it to the
+                main
+                ethernet post of AP from the other side. This will provide access to shared resources between
+                multiple devices functioning under the same LAN network.
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md" src="/assets/images/MWT Utopia/cable.png"
+                alt="DiBillion Da Ethernet Cable - Cat 8 (Parrish, 2021)">
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                DiBillion Da Ethernet Cable - Cat 8 (Parrish, 2021)</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Since most of the ethernet cables are made up of copper and they use electrical signals for
+                data transmission, the possibility of electromagnetic interference occurs rises significantly. To
+                prevent this, ‘shielded cables’ are used to cushion the wire from any sort of interference
+                or electromagnetic leakages. Ethernet cables are further categorized as ‘Cat’ versions along with
+                their distinctive specifications. Apart from ethernet cables, selection of fiber optic cables is also
+                considered for the side. Basic differences between these cables are demonstrated in the table below:
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class=" w-auto md:h-72 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/MWT Utopia/cable comp.png" alt="Comparison of available cables">
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Comparison of available cables</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The above comparisons clarify the differences between ethernet and fiber optic cables. There
+                are a few crucial features in Fiber Optic cables such as light pulse transmission, that make them
+                special. However, considering the fragile nature of Fiber Optic cables, the recommendation is to
+                choose Ethernet cables: either Cat 7a or Cat 8. However, the talk about cables can be done with
+                stakeholders in the meantime and selected wisely without any obfuscation.
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                3.2 Recommended Software
+            </h1>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                Security Implementation Requirements
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Like hardware, few significant softwares are carefully considered during the
+                WLAN deployment process. With an increasing number of hackers and crackers every day, the
+                system must be prepared to defend against any sort of attack at any time. Firewall installation is
+                considered
+                to be one of the best methods to stay away from network threats and anomalies. However, since
+                this deployment is for an SOHO environment, usage of a firewall does not make sense: financially
+                and based on the number of users. This is why, Intrusion Detection Software (IDS) and Antivirus are
+                recommended to maintain system security in Utopia Tech.
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                3.2.1 Intrusion Detection Software
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                An Intrusion Detection System (IDS) is a security software that diminishes security threats
+                such as cyber-attacks and malware. Furthermore, IDS also blocks upcoming threats that might
+                harm the system by accessing it in an unauthorized way. The main reason to install an Intrusion
+                Detection System in a system is because it alerts system administrator in case of any suspicious
+                activities, by monitoring network traffic of the environment. The IDS is further classified into
+                two major types: Host Intrusion Detection Software (HIDS) and Network Intrusion Detection
+                System (NIDS).
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class=" w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/MWT Utopia/IDS Comparision.png" alt="Comparison of available IDS">
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Comparison of available IDS</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                After analyzing all available Intrusion Detection Software, the chosen IDS for Utopia Tech
+                is the ‘Open WIPS-NG’ IDS. This is because the software is specifically built for wireless system
+                protection and the available features match our expectations. However, Snort IDS seems to have
+                problems with scalability and Suricata is used in large-scale businesses rather than
+                SOHO companies like Utopia Tech.
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                3.2.2 Antivirus
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Along with devices like laptops and smartphones, routers are also among the top targets for
+                hackers lately. These network users can easily break the vulnerability of routers to find sensitive
+                data such as bank credentials and private information. These credentials might further be used to
+                steal or for other illegal works. To assure security to all WLAN users in Utopia Tech, the installation
+                of Antivirus is considered crucial. Some of the available Antivirus and their functionality
+                comparisons are shown in the table:
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-72 content-center mx-auto px-4 rounded-md" src="/assets/images/MWT Utopia/AV comp.png"
+                alt="Comparison of Antivirus functionalities"> <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Comparison of Antivirus functionalities</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Considering the comparisons above, the AVG (Antivirus Guard) is an obvious choice as
+                our antivirus software. The features of AVG that include total internet security from phishing or
+                spam are something we were looking for. The antivirus software further scans emails and mends
+                virus-infected files to keep the system secured. The online shield in AVG also guarantees the safety
+                of data exchanges through instant messengers (Wikipedia contributors, 2021a). This way, the
+                WLAN system can be brought into use, without any fear of being attacked or tricked.
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                4. Conclusion
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The deployment process assured detailed information about all the crucial factors,
+                methods, and procedures of Wireless Local Area Network setup. The site survey conducted
+                during the WLAN deployment produced several learning opportunities and few complications to
+                solve. Likewise, the project also created a chance to learn about network hardware and software
+                in depth. In a nutshell, wireless LAN is deployed in an SOHO environment and the internet can be
+                accessed as well. External RF interferences were detected and necessary actions were taken to
+                troubleshoot them and facilitate the best possible internet coverage.
+            </p>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                References
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="sm:mx-32 lg:mx-60 leading-relaxed md:leading-loose text-left text-sm sm:text-justify overflow-x-clip">
+                Advantages of 802.11ac | disadvantages of 802.11ac. (2019, January 15). RF Wireless
+                World. https://www.rfwireless-world.com/Terminology/Advantages-and-
+                Disadvantages-of-802-11ac.html
+                <br>
+                <br>
+                CAPANO, D. A. N. (2021, April 25). Control Engineering | Wireless line-of-sight, non-
+                line-of-sight, beyond-line-of-sight propagation. Control Engineering. https://
+                www.controleng.com/articles/wireless-line-of-sight-non-line-of-sight-beyond-
+                line-of-sight-propagation/
+                <br>
+                <br>
+                Cisco Press. (2015, June 15). Radio Signal Interference > Wireless LAN Implications,
+                Problems, and Solutions. Cisco- Networking, Cloud and Cybersecurity
+                Solutions. https://www.ciscopress.com/articles/article.asp?
+                p=2351131&seqNum=2
+                <br>
+                <br>
+                Huawei Support. (2019, June 12). Where Are Interference Sources in WLAN and How Is
+                the Interference Strength? - AR500, AR510, and AR530 V200R007 CLI-based
+                Configuration Guide - WLAN-FAT AP - Huawei. Huawei. https://
+                support.huawei.com/enterprise/en/doc/EDOC1000151733/8215e3a1/where-are-
+                interference-sources-in-wlan-and-how-is-the-interference-strength
+                <br>
+                <br>
+                Innoo Tech. (2019). Amazon.com: Innoo Tech Anti Spy Detector & Camera Finder RF
+                Signal Detector GPS Bug Detector Hidden Camera Detector for GSM Tracking
+                Device GPS Radar Radio Frequency Detector: Electronics. Amazon. https://
+                www.amazon.com/Innoo-Tech-Detector-Tracking-Frequency/dp/B07XDT9TGG/
+                ref=sr_1_2?
+                dchild=1&keywords=radio+frequency+detector&qid=1626629972&sr=8-2
+                <br>
+                <br>
+                Notes, E. (2019, July 18). WiFi Standards: IEEE 802.11 » Electronics Notes. Electronics
+                Notes. https://www.electronics-notes.com/articles/connectivity/wifi-
+                ieee-802-11/standards.php
+                <br>
+                <br>
+                Parrish, K. (2021, February 5). The best Ethernet cables for 2021. Digital Trends. https://
+                www.digitaltrends.com/computing/best-ethernet-cables/
+                <br>
+                <br>
+                Porter, D. (1997). Internet Culture (1st ed., Vol. 1). Routledge. https://doi.org/
+                10.4324/9780203699560
+                <br>
+                <br>
+                Sauter, K. (2008, April 29). Active vs. predictive site surveys: pros and cons. Network
+                World. https://www.networkworld.com/article/2278470/active-vs--predictive-
+                site-surveys--pros-and-cons.html
+                <br>
+                <br>
+                Site Survey Tool - TamoGraph - Understanding Survey Types: Passive, Active, and
+                Predictive. (n.d.). TamoSoft. Retrieved June 7, 2021, from https://
+                www.tamos.com/htmlhelp/tg/understanding_survey_types_pas.htm
+                <br>
+                <br>
+                Synology Inc. (n.d.). Synology RT2600ac │ AC2600 high-speed Wi-Fi router │ Parental
+                controls & security │ | Synology Incorporated. Synology. Retrieved August 13,
+                2021, from https://www.synology.com/en-global/products/RT2600ac
+                <br>
+                <br>
+                telco.sydney. (n.d.). Ubiquiti Unifi UAP-AC-PRO. Retrieved August 16, 2021, from
+                https://telco.sydney/products/ubiquiti-unifi-uap-ac-pro
+                <br>
+                <br>
+                Top 10 BEST Intrusion Detection Systems (IDS) [2021 Rankings]. (2021, August 6).
+                Software Testing Help. https://www.softwaretestinghelp.com/intrusion-
+                detection-systems/#4_Snort
+                <br>
+                <br>
+                Whitlock, B. (2020, July 6). UNDERSTANDING and controlling RF interference. Sound
+                & Video Contractor. https://www.svconline.com/resources/understanding-and-
+                controlling-rf-interference-364849
+                <br>
+                <br>
+                ZVANOVEC, S., PECHAC, P., & KLEPAL, M. (2003). RADIOENGINEERING (4th ed.,
+                Vol. 3). Radioeng.
+                <br>
+                <br>
+            </p>
+            <br><br> <br> <br>
+
+
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="flex items-center justify-center">
+                <img class="h-4 w-auto" src="/assets/images/rotated-right-arrow-dark-icon.png" alt="">
+                <span class="text-sm">
+                    &nbsp; &nbsp; To understand the project and our work, please read the project documentation.
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+
+    <!-- Downloads and Links  -->
+    <div class="md:flex justify-center">
+        <div class="flex justify-center mt-16 pb-24 md:mb-0 mx-2">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto group flex border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                <img class="w-auto h-5 group-hover:rotate-[-20deg] ease-in-out duration-700"
+                    src="/assets/images/pdf-icon.png" alt="">
+                &nbsp;
+                <a href="/assets/contents/MWT Utopia/NPI000040_Individual Assignment - Mobile & Wireless Technology.pdf"
+                    download="Deploying WLAN at Utopia Tech - Document">Download PDF</a>
+            </div>
+        </div>
+        <div class="flex justify-center mt-16 pb-24 md:mb-0 mx-2">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto group flex border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                <img class="w-auto h-5 group-hover:rotate-[-20deg] ease-in-out duration-700"
+                    src="/assets/images/ppt-icon.png" alt="">
+                &nbsp;
+                <a href="/assets/contents/MWT Utopia/NPI000040_MWT_Presentation.pptx"
+                    download="Deploying WLAN at Utopia Tech - PPT">Download
+                    PPT</a>
+            </div>
+        </div>
+    </div>
+
+    <p class="footnote-text flex justify-center items-end pb-40">Created with love by &nbsp;
+        <a class="font-semibold underline" href="https://www.linkedin.com/in/sandesh-s11/" target="_blank">
+            <img class="h-8 w-auto cursor-pointer animate-pulse" src="/assets/images/Logo-Black.png" alt="">
+        </a>
+        &nbsp;
+    </p>
+
+    <!-- AOS Link  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>

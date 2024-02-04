@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Application in C Program</title>
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="./main.js">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="/assets/images/fav-icon.ico">
+</head>
+
+<body class="h-full w-screen mx-auto bg-linearLight font-firaCon" oncontextmenu="return false" onmousedown="return false" onselectstart="return false">
+
+    <!-- Title Section  -->
+    <section data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="h-full w-screen font-firaCon">
+        <div class="h-screen w-screen px-8 sm:px-32 lg:px-60 text-center grid justify-center items-center">
+            <div>
+                <p class="footnote-text">Introduction to C Programming</p>
+                <h1 class="heading-1-text">Malaysian Urban Banking Management System</h1>
+                <h2 class="subtitle-text">Banking Simplified for You</h2>
+            </div>
+            <div class="text-sm font-medium opacity-50">
+                <p>Sandesh Subedi</p>
+                <p>March, 2020</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="h-full w-screen font-firaNormal">
+        <div class="h-full w-screen px-8 sm:px-32 lg:px-60 text-justify">
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text">Abstract
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Our project, the "Malaysian Urban Banking Management System," represents a revolution
+                in modern banking. This assignment explores the dynamic world of banking technology,
+                where computers have reshaped the landscape. This console-based banking application is
+                designed to offer essential services to both clients and administrators. Its primary goal is
+                to provide user-friendly, secure, and attractive banking experiences. <br> <br>
+                Admins play a crucial role, in managing clients and overseeing operations. Registration
+                and login are prerequisites for admin access, ensuring security. The project employs C
+                programming concepts, including structures, arrays, functions, loops, validation, file
+                handling, and pointers. These concepts are woven into the application's fabric, creating a
+                robust and efficient banking system. In a nutshell, the project showcases a sample output,
+                demonstrating its real-world functionality. It represents the power of technology in
+                modern banking, delivering a secure and user-friendly platform for all.
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text">
+                Acknowledgement</h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                I would like to express my heartfelt gratitude to my professor, Mr. Sushil Adhikari, for his
+                unwavering guidance and mentorship throughout this project. His expertise as well as
+                encouragement has been invaluable. <br>
+                I also want to extend my thanks to my classmates for their support, insightful discussions,
+                and collaborative efforts, which have enhanced the quality of our work. <br>
+                Lastly, I appreciate the wealth of knowledge and resources from the academic community
+                and open-source platforms, which played a crucial role in our project's success.
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">1.
+                Introduction and Assumptions</h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Banking applications represent a category of enterprise software extensively adopted by
+                banking institutions and held in high regard by their clientele. The contemporary appeal of
+                these applications can be attributed to their characteristics of simplicity, security, visual
+                appeal, and the added incentive of exclusive offers provided through the application
+                platform. <br><br>
+                Regarding the specific project at hand, it involves the development of a banking
+                application derived from the Malaysian Urban Bank Management System. This software
+                application primarily focuses on delivering an array of services related to client accounts
+                within the banking sector. The software operates within a console-based environment,
+                distinguishing between two key user roles: 'Admin,' responsible for system operation, and
+                'Clients,' who benefit from the provided services.
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                User Roles</h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                There are two major user types in our application: Admin and Clients. Both of them have
+                their own sets of privileges which they can use to facilitate the banking process. Their
+                major roles and functions and roles are described below:
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.1 Admin
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                In a broader context, an administrator assumes the responsibility of overseeing, managing,
+                and facilitating client interactions within the application framework. This role
+                encompasses several distinct functions aimed at effectively handling and supporting
+                clients. Administrators are empowered to access and review the client database, display
+                transaction records, and execute account deletions when necessary. To engage in
+                administrative activities within this software environment, registration, and authentication
+                are integral prerequisites.
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.1 Clients
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                In a parallel vein, clients represent end-users who avail themselves of the application's
+                services. Their roles encompass accessing and utilizing the features provided by the
+                system. Clients are granted specific privileges that enable them to interact with their
+                accounts. These include accessing exclusive account information, updating personal
+                details, monitoring account balances, executing financial transactions such as deposits and
+                withdrawals, and reviewing transaction histories. To participate as clients in this software
+                ecosystem, they must undergo a registration and login process, thereby ensuring secure
+                access to their designated functionalities.
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                3. Application Design
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                This section delves into the foundational structure of the application, offering a succinct
+                yet informative description of its architectural design and operational mechanisms. The
+                two major design blocks are pseudocode and flowcharts. Further information regarding
+                them and their application in the design of the Malaysian Urban Banking Management
+                System is demonstrated below:
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                3.1. Pseudocode
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Pseudocode serves as an informal means of articulating programming logic, free from the
+                constraints of rigid programming language syntax. It plays a pivotal role in outlining the
+                algorithmic processes of the application.
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                3.2. Flowcharts
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Flowcharts, employed within this context, serve as visual representations of the program's
+                logic. They utilize a series of geometric symbols and interconnected lines to graphically
+                illustrate the algorithm's logical flow. These graphical aids are instrumental in enhancing
+                comprehension of the program's intricate operational structure.
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                3.2. Application of Pseudocode and Flowcharts
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Flowcharts, employed within this context, serve as visual representations of the program's
+                logic. They utilize a series of geometric symbols and interconnected lines to graphically
+                illustrate the algorithm's logical flow. These graphical aids are instrumental in enhancing
+                comprehension of the program's intricate operational structure. <br><br>
+
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="flex items-center">
+                <img class="h-4 w-auto" src="/assets/images/rotated-right-arrow-dark-icon.png" alt="">
+                <span class="text-sm">
+                    &nbsp; &nbsp; Find Pseudocodes and Flowcharts in the PDF file below.
+                </span>
+            </div>
+
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                4. Application of Programming Concepts
+            </h1>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                4.1 Structure
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The structure is a user-defined datatype in C language that authorizes users to
+                combine data of distinctive types together. It assists in generating data type that seems
+                more meaningful in a program. In my project, structure has been used multiple times like
+                structure date, structure DOB, structure name, structure clients, and so on.
+            </p>
+            <br>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="flex items-center">
+                <img class="h-4 w-auto" src="/assets/images/rotated-right-arrow-dark-icon.png" alt="">
+                <span class="text-sm">
+                    &nbsp; &nbsp; Find example of application in the PDF file below.
+                </span>
+            </div>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                4.2 Arrays
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Arrays can be defined as a kind of data structure that can store a definite-sized collection
+                of elements of the same type. The function of the array is to store a collection of variables
+                of the same type. Particularly in my project, the array stored the list of all accounts that
+                are used.
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                4.3 Functions
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Functions in C programming can be explained as a group of statements that provide
+                functionality to perform a certain task together. A program in C is incomplete without the
+                inclusion of at least one function i.e., main( ). There are two types of functions. They are :
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                4.4 Iteration Statement
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Iteration statements are commonly known as ‘Loops’. It is the methodology where certain
+                instructions or statements are executed repeatedly for a specified number of times until a
+                required condition is met. In my project, a for loop is used for the purpose of iterating
+                arrays.
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                4.5 Validation
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Validation is often ignored section in most of the fields. However, this is one of the
+                indispensable factors in making applications secure, trustable, successful, and functioning
+                appropriately. In this application, validation is used during the changing of passwords
+                where the previous password must match to new password for that to be modified.
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                4.6 File Handling
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                More or less specific inputs are essential for data to be generated several numbers of times
+                in programming. However, the data that is to be displayed can be huge in size, which may
+                not be supportive. In this case, data can be stored in a local file which can be authorized
+                anytime the user wants. So, file handling is something that enables users to create, update,
+                and erase the files stored in that local file via the C program.
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                4.7 Pointers
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                In C programming language, the pointer can be defined as the variable that stores/ points
+                the address of another variable. The main function of the pointer is to allocate memory
+                dynamically at the run time. In the project, a file pointer is used, which controls as well as
+                authorizes files from device storage.
+            </p>
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                5. Application Outcome
+            </h1>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="flex items-center">
+                <img class="h-4 w-auto" src="/assets/images/rotated-right-arrow-dark-icon.png" alt="">
+                <span class="text-sm">
+                    &nbsp; &nbsp; Find screenshots of program's outcome in the PDF file below.
+                </span>
+            </div>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                5. Conclusion
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The banking application project offered a valuable learning experience, introducing us to
+                new features and programming techniques. This application provides essential
+                functionalities for clients and administrators, including exclusive account management,
+                convenient deposits, and withdrawals. This project exemplifies the potential of technology
+                to enhance banking services, setting the stage for future advancements. As the digital
+                realm of banking continues to evolve, the Malaysian Urban Banking Management System
+                project represents a noteworthy stride towards harnessing the power of technology to
+                elevate financial services, setting the stage for future advancements and improved user
+                experiences.
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text">References
+            </h1>
+            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" style="list-style-type: disc;">
+                <li>GeeksforGeeks. (2023). C Programming Language tutorial.
+                    GeeksforGeeks. https://www.geeksforgeeks.org/c-
+                    programming-language/</li>
+                <br>
+                <li>Goues, C. L., Holtschulte, N. J., Smith, E. K. M., Brun, Y.,
+                    Dévanbu, P., Forrest, S., & Weimer, W. (2015). The
+                    ManyBugs and IntroClass benchmarks for automated repair
+                    of C programs. IEEE Transactions on Software
+                    Engineering, 41(12), 1236–1256. https://doi.org/10.1109/
+                    tse.2015.2454513</li>
+                <br>
+                <li>Jones, R. W. M., & Kelly, P. H. J. (1997). Backwards-Compatible
+                    Bounds Checking for Arrays and Pointers in C Programs.
+                    Arrays in C Programming, 001, 13–26. https://
+                    www.ep.liu.se/ea/cis/1997/009/02/cis9700902.pdf</li>
+                <br>
+                <li>Kim, J., & Moon, J. Y. (1998). Designing towards emotional
+                    usability in customer interfaces—trustworthiness of cyber-
+                    banking system interfaces. Interacting With Computers,
+                    1 0 ( 1 ) , 1 – 2 9 . h t t p s : / / d o i . o r g / 1 0 . 1 0 1 6 /
+                    s0953-5438(97)00037-4</li>
+                <br>
+                <li>Stroustrup, B. (1985). The C++ programming language. http://
+                    ci.nii.ac.jp/ncid/BA26230123</li>
+                <br>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Downloads and Links  -->
+    <div class="md:flex justify-center">
+        <div class="flex justify-center mt-16 pb-24 md:mb-0 mx-2">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto group flex border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                <img class="w-auto h-5 group-hover:rotate-[-20deg] ease-in-out duration-700"
+                    src="/assets/images/pdf-icon.png" alt="">
+                &nbsp;
+                <a href="/assets/contents/C-programming/ITC Project Documentation.pdf"
+                    download="Malaysian Banking in C - Document">Download PDF</a>
+            </div>
+        </div>
+        <div class="flex justify-center mt-16 pb-24 md:mb-0 mx-2">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto group flex border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                <img class="w-auto h-5 group-hover:rotate-[-20deg] ease-in-out duration-700"
+                    src="/assets/images/ppt-icon.png" alt="">
+                &nbsp;
+                <a href="/assets/contents/C-programming/ITC PPT PDF.pdf"
+                    download="Malaysian Banking in C- Presentation File">Download PPT</a>
+            </div>
+        </div>
+        <div class="flex justify-center mt-16 pb-24 md:mb-0 mx-2">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto group flex border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                <img class="w-auto h-5 group-hover:rotate-[-20deg] ease-in-out duration-700"
+                    src="/assets/images/source-code-icon.png" alt="">
+                &nbsp;
+                <a href="https://github.com/SandeshKey/Banking-System-with-C-Programming" target="_blank"
+                    download="Malaysian Banking in C- Presentation File">View Source Code</a>
+            </div>
+        </div>
+    </div>
+
+    <p class="footnote-text flex justify-center items-end pb-40">Created with love by &nbsp;
+        <a class="font-semibold underline" href="https://www.linkedin.com/in/sandesh-s11/" target="_blank">
+            <img class="h-8 w-auto cursor-pointer animate-pulse" src="/assets/images/Logo-Black.png" alt="">
+        </a>
+        &nbsp;
+    </p>
+
+    <!-- AOS Link  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

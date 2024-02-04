@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Car Rental System - System Development Method</title>
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="./main.js">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="/assets/images/fav-icon.ico">
+</head>
+
+<body class="h-full w-screen mx-auto bg-linearLight font-firaCon font-light text-sm md:font-normal md:text-base" oncontextmenu="return false" onmousedown="return false" onselectstart="return false">
+
+    <!-- Title Section  -->
+    <section data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="h-full w-screen font-firaCon">
+        <div class="h-screen w-screen px-8 sm:px-32 lg:px-60 text-center grid justify-center items-center">
+            <div>
+                <p class="footnote-text">System Development Methods</p>
+                <h1 class="heading-1-text">Online Car Rental System - CRC</h1>
+                <h2 class="subtitle-text"></h2>
+            </div>
+            <div class="text-sm font-medium opacity-50">
+                <p>Sandesh Subedi</p>
+                <p>July, 2021</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Section  -->
+    <section class="h-full w-screen font-firaNormal">
+        <div class="h-full w-screen px-8 sm:px-32 lg:px-60 text-justify">
+            <br>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text">Abstract
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                This work entails a thorough exploration of the System Development Life Cycle (SDLC) for Mantra Car
+                Rental Company, culminating in the selection and implementation of the Rapid Application Development
+                (RAD) methodology. The project is divided into two parts, with the first encompassing the initial stages
+                of SDLC, from project initiation and planning to system analysis and design. Emphasis is placed on agile
+                methodologies, iterative development, and requirements gathering, presenting a robust foundation for
+                subsequent implementation. <br><br>
+                Part two delves into the detailed construction, testing, and deployment phases, elucidating the choice
+                of specific programming languages and tools for web development, database management, and interface
+                design. The testing phase is meticulously outlined, encompassing unit testing, integration testing, and
+                system testing, crucial for ensuring the reliability and efficiency of the developed system. The
+                deployment phase discusses the selected changeover strategy to minimize disruptions during the
+                transition. <br><br>
+                Central to this work is the adoption of RAD, a dynamic methodology tailored to swiftly deliver a
+                high-quality system. The RAD model's four distinct phases, ranging from requirements planning to
+                cut-over, are analyzed in the context of Mantra Car Rental's unique requirements. Visual aids such as
+                diagrams and Gantt charts enhance the understanding of the proposed system.
+            </p>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                1. Project Planning
+            </h1>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                1.1 Introduction
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Various modern technologies have been playing some indispensable roles in flourishing business.
+                Assisting activities within the business organization enhance swiftly, innovative technologies are
+                trusted to be effective, advantageous as well as methodical. <br> <br>
+
+                <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                    class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                    src="/assets/images/Mantra Car Rental - SDC/crc logo.png" alt="Mantra Rental Company Logo">
+                <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure: Mantra
+                Rental Company Logo</p>
+            <br> <br>
+            The Mantra Rental Company has been offering car rental services for the last 2 decades. The
+            The company offers car rentals of various models, which is further stated by its manufacturers, name
+            of the model, daily rental costs, registration number, and odometer reading as well.
+
+            <br> <br>
+            Currently, there are two genuine options available to book a car from Mantra Rental Company:
+            company visit and phone call booking. A client has to pay a visit to the rental company to check the
+            appearance and operational quality of desired cars. Likewise, if a client wants to book a
+            car via phone call, the company will provide a handful of basic information about the inquired
+            cars. To finalize the booking of a car, information of clients such as their name, address, mobile
+            numbers, driver's license, and also the odometer of the car is recorded in Microsoft Excel
+            Spreadsheet. A few of the crucial stuff used during this business process are given below : <br><br>
+            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" style="list-style-type: disc;">
+                <li> Odometer Reading
+                </li>
+                <br>
+                <li> Rental Agreement
+                </li>
+                <br>
+                <li> Customer’s Details (Name, address, mobile number, driving license number)
+                </li>
+                <br>
+                <li> Job Title & Company Name (for Corporate Customers)
+                </li>
+                <br>
+            </ul>
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                1.1.1 Company Location
+            </h1>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/crc location.png"
+                alt="Office : Pokhara - 6, Lakeside Road, Street No. 17">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure: Office
+                Location</p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                1.1.2 Problem Statement
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                As mentioned before, possible ways of renting cars from Mantra Rental Company are company
+                visits and phone booking. However, with the technology advancing and people probing for easy
+                alternatives, these available options seemed insufficient. To book a car physically (eye to eye),
+                clients need to visit the company during office hours (i.e., between 10 AM and 5 PM). The
+                company also provided feedback to make office hours more flexible. On the other hand,
+                information provided via audio couldn’t satisfy customers to hire cars. Customers seem hesitant
+                to confirm the booking of cars without actually watching how they look and operate. With the new
+                system, customers can study every detail of cars and reserve it without any hurdles. The new
+                online system also allows clients to book cars from anywhere and at any time. This means, there
+                is no more worrying about reaching the company within limited hours to book a car. <br><br>
+                Likewise, pointing to the database system being used currently, the company is storing data using
+                Microsoft Spreadsheet, which according to Forbes(Leung, 2014) contains about 90% of the fallacy.
+                Furthermore, this also consumes plenty of time as staff need to scroll in and out of spreadsheets,
+                to find old records. With the new system, errors in the database can be plummeted and details of
+                old customers will be automatically shown when their ID number or name is entered.
+            </p>
+            <br><br>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                Scope, Aim & Objectives
+            </h1>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                Scope
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The scope of this project is to plan, analyze, and design a simple prototype system for Mantra
+                Car Rental Company (MCRC). We are required to perform different research to be able to
+                achieve the aim and objectives of the system. This system will be usable by both general
+                customers and staff of the company. It is a web-passed platform which means the system will be
+                accessible 24/7 except for minimum server outages. The system will have an online
+                payment system to deal with payments made by customers (Overview Of Online Car Rental
+                Systems Information Technology Essay, n.d.).
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                Aim
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The main aim of this research is to design a system that allows customers to register accounts
+                themselves and reserve the car based on their model and price. Besides, it will deliver a high-quality
+                product friendly service, and good value that convinces customer to make the best
+                choices according to their budget. (Li, 2013). An online car rental system will be implemented
+                for the company which will aid the high demand for rent of cars and eases the staff task.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                Objectives
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The objectives of the report are mentioned below:
+                <br><br>
+            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" style="list-style-type: disc;">
+                <li> To computerize and automate the system (online) to make it scalable in the future
+                </li>
+                <br>
+                <li> To ease the employees for recording and managing information on cars, car booking, and
+                    rental agreements between the company and customers
+                </li>
+                <br>
+                <li> To send customized recommendations and special offers to customers based on their browsing
+                    history of cars or content
+                </li>
+                <br>
+                <li> To provide a sales report monthly and a report on the total number of customers and staff in
+                    different categories
+                </li>
+                <br>
+            </ul>
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                2. Agile Principles and IS Methodologies
+            </h1>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.1 Agile Methodology
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Agile methodology is software development approach, based on the concept of iterative
+                and incremental imitation of software development. Instigated against the background of
+                laboriously regulated models, the methodology concentrates on team participation and
+                satisfactory result. Continual cooperation with stakeholders and welcoming improvements at any
+                phase is what makes this approach different to traditional methodologies (McCormick, 2012).
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/Agile Cycle.png"
+                alt="Life Cycle of Agile Methodology (Pawar, 2019)">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure: Life
+                Cycle of Agile Methodology (Pawar, 2019)</p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.1.1 Ways of achieving agility
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The agile methodology is based on the Agile Manifesto and comprises 4 values and 12
+                principles. Propositions behind this manifesto are what it requires, to attain project agility.
+                With the implementation of appropriate principles in the correct project situation, the project
+                becomes more agile. The project can be directed in development rather than documentation.
+                Furthermore, flexibility and superiority in product quality can be achieved with agility. From
+                frequent customer feedback to mutual understanding between working parties, the agile
+                manifesto comprises a handful of fundamental principles. <br><br>
+                Some of the principles of agile methodologies accustomed in our project to enhance agility are
+                specified below:
+            </p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                <b>Agile Principle 1 : Customer satisfaction through early and continuous delivery of valuable
+                    software</b> <br> <br>
+                Creating software consumes a lot of time as well as effort. However, that time and effort are not
+                worth it unless clients are satisfied with the product they receive. Therefore, the principle behind
+                The agile manifesto focuses on the iterative delivery of products so that the clients get engaged with
+                the
+                software before its completion. <br><br>
+                <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                    class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                    src="/assets/images/Mantra Car Rental - SDC/Agile P `.png"
+                    alt="Agile Principle 1 - Customer Satisfaction through early and continuous software delivery">
+                <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure: Agile
+                Principle 1 - Customer Satisfaction through early and continuous software delivery</p>
+            <br> <br>
+            </p>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                For the software creation in Mantra Rental Company, delivering working software regularly in
+                between short intervals would make the project flexible and engaging. Firstly, stakeholders should
+                not wait long until the product is entirely built. Secondly, with continuous delivery, end users get
+                accustomed to the product operation, and hence, with appropriate feedback, a satisfactory result is
+                expected.
+            </p>
+            <br> <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                <b>Agile Principle 2: Welcome changing requirements, even late in development
+                </b> <br> <br>
+                Experience enhances knowledge, skills, and other characteristics like confidence and maturity.
+                When a project is instigated, the regular procedure continues until any changes are made for new
+                experimentation. With changes, new experiences are appended and knowledge is enhanced. Our
+                customers acknowledge their competitive needs more clearly and with this proposition, the customer
+                gets what they need for their competitive advantage. <br><br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                In the case of Mantra Rental Company, welcoming the required changes in the project would be crucial,
+                As understanding their customer’s demands and current market instability. This can certainly help
+                the company to stay ambitious in business and make an obligatory upgrade in the company’s services.
+                With changes, the company can follow the strategies it desires and accomplish what it
+                aims for.
+            </p>
+            <br> <br>
+
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                <b>Agile Principle 5: Build projects around motivated individuals
+                </b> <br> <br>
+                This principle of agile methodology centralizes the concept of encircling the project task with
+                motivated and enthusiastic members. Having motivated individuals who are eager to explore and
+                overcome hardships, productive as well as cost-efficient outcomes can be produced. Furthermore, this
+                also prospers faith, support, satisfaction, and self-empowerment between team members. <br><br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                For the development project of Mantra Rental Company, all the members associated with the
+                project are keen, cooperative, and passionate about their tasks. Self-organized individuals are
+                expected to bring out the result of the topmost standard (Platinum Edge, 2013). Having a healthy
+                working environment and with mutual collaboration between everyone, admirable products are
+                likely to be produced.
+            </p>
+            <br> <br>
+
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                <b>Agile Principle 6: The most efficient and effective method of conveying information is to
+                    and within a development team is face-to-face conversation
+                </b> <br> <br>
+                Nearly all the communication in a project is about project operation(i.e., schemes, techniques, and
+                uncertainties) or project content(i.e., necessities). To put together a high-standard
+                software with a high acceptance rate on the end user side, it is pivotal for the development team to
+                clearly understand every detail of the project. For this, face-to-face communication is required,
+                as it avoids ambiguity and confusion. <br><br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Face-to-face communication between stakeholders of Mantra Rental Company and our team
+                members will be crucial. With everyone being engaged, our team can observe and understand
+                their requirements without any distractions or barriers. Additionally, having a face-to-face
+                meeting also develops the mutual relationship between both parties.
+            </p>
+            <br> <br>
+
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                <b>Agile Principle 7: Working software is the primary measure of progress
+                </b> <br> <br>
+                When we observe the project from the client’s point of view, the most precious thing is proper
+                functional software. In between all the processes from planning to deployment and review, the
+                key is to build properly operating software. If satisfying software is not handed in at the end,
+                everything done during the project is considered a failure: both by clients and the project team.
+                Therefore, the delivery of trustworthy operating software is the eventual factor in computing project
+                progression. <br><br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Our project team believes that providing clients with a properly functioning system will let them
+                see how progressive and effective the project is going. Rather than heaps of documentation,
+                we will provide Mantra Car Rental with decently working software, that meets every possible
+                requirement they asked for. Along with advancement, this also inaugurates trust between both
+                parties and results in satisfaction with the project.
+            </p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                2.2 Methodologies : Compare and Contrast
+            </h1>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                1. Incremental Methodology
+            </h1> <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/Incremental.png"
+                alt="Life Cycle of Agile Methodology (Pawar, 2019)">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Incremental Model (Wikipedia contributors, 2021)</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The incremental model is a system development methodology where the system needs some
+                requirements which are further broken down into multiple independent modules of the software
+                development cycle. This methodology flows through some phases beginning with analysis as a
+                starting phase, followed by design, implementation, verification, and maintenance sequentially.
+            </p>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                2. Rapid Application Development (RAD) Methodology
+            </h1> <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/RAD.png" alt="Rapid Application Development (RAD) Model
+                (The Ultimate Guide to Rapid Application Development, 2021)">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Rapid Application Development (RAD) Model
+                (The Ultimate Guide to Rapid Application Development, 2021)</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Rapid Application Development (RAD) is a process of software development that consumes less
+                period on planning and provides high priority for task growth and development. This process
+                is based on the prototyping method which allocates the time and resources for introducing the project.
+
+                The main aim of this system is to provide a high-quality system in a short period, with an entire
+                focus on development instead of detailed documentation. RAD modeling has some main features
+                such as focusing on code, prototyping, user involvement, and reuse of templates or tools.
+            </p>
+            <br><br>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                3. Scrum Methodology
+            </h1> <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/Scrum.png" alt="Scrum Model (Pisuwala, 2019)">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Scrum Model (Pisuwala, 2019)</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The Scrum model is a type of agile development methodology that is generally used for developing
+                software with incremental and iterative processes. This methodology is considered to be rapid,
+                effective, and adaptable as well as a flexible agile framework to design and deliver value for
+                customers.
+                The prime aim of the scrum methodology is to fulfill or satisfy the needs and demands of customers
+                with continuous random progress, combined responsibilities, and communication a transparent
+                environment.
+            </p>
+            <br><br>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                4. Spiral Methodology
+            </h1> <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/Spiral.png" alt="Spiral Model (Kumar, 2021)">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Spiral Model (Kumar, 2021)</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The spiral methodology is often renowned as one of the most essential software development life
+                cycle models that assists or supports as Risk – driven. With a high emphasis on risk analysis, the
+                spiral model is made with the combination of sequential linear development model i.e., waterfall and
+                iterative model. Within the spiral model, several distinctive phases begin with
+                the construction of product design and end with progress from clients that is to be achieved in
+                the project.
+            </p>
+            <br><br>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                5. Waterfall Methodology
+            </h1> <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/Waterfall.png" alt="Waterfall Model (Kumar, 2021)">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Waterfall Model (Kumar, 2021)</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+
+                The waterfall model is the first introduced model among all the process models. It is also
+                recognized as a linear–sequential life cycle model, which means that it demonstrates the process
+                of software development in linear–sequential flow. This is the methodology where there is no
+                phase reverse i.e., returning to the previous phase in between the project development is not
+                feasible. This is a traditional method that avoids the involvement of users in between development
+                processes. This model is mostly used for projects involved with software engineering.
+            </p>
+            <br><br>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="flex items-center justify-center">
+                <img class="h-4 w-auto" src="/assets/images/rotated-right-arrow-dark-icon.png" alt="">
+                <span class="text-sm">
+                    &nbsp; &nbsp; Detailed Comparison and Contrast between Methodologies is provided in PDF File
+                </span>
+            </div>
+            <br><br>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                3. System Analysis
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Although four different methodologies were recommended for the development of our project,
+                we have carried out our project under RAD (Rapid Application Development ) methodology.
+                Requirement analysis is the first step that is carried out in this methodology. There are various
+                techniques of gathering requirements but in the case of our project we have gathered requirement
+                through questionnaires and interviewing stakeholders and end users of ‘Mantra Car Rental
+                System’ and SWOT analysis is performed.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                3.1 SWOT Analysis
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                SWOT analysis stands for strengths, weaknesses, opportunities, and threats which is the
+                technique used for specific projects. This analysis is used for both professional and personal
+                purposes. To examine organizational growth properly or orderly the above factors are important.
+                Likewise, our project requires a SWOT analysis for developing a car rental company.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                1. Strengths
+            </h1> <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The majority of people in this globe love to travel. Though they use various means for travel,
+                they might use vehicles or travel by walking. Mostly, people use vehicles for travel. And,
+                they order vehicles on rent. In this way, business will peak up for car rental companies. For,
+                our team, the goal is to seriously focus on it and provide better facilities. In such case, our
+                developing team provides good online renting facilities with a good price which depends
+                on the respective location. The price for renting vehicles is different from other
+                agencies and provides good facilities that customers need while traveling. This strategy
+                helps our client as competitive benefits in the market and it is almost difficult for
+                other car rental companies to run in the same market (Car Rental Agency SWOT Analysis -
+                TheFinanceResource.Com, n.d.).
+            </p>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                2. Weaknesses
+            </h1> <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Though we provided a better facility, there was not an employee to facilitate their
+                services. In addition, there is a problem for a large family which requires more space in
+                The vehicle but our client only serve with an only by car. So the family has to hire a car to get to our
+                facilities. In other words, our client company works as a small-scale agency.
+                Our client does not have a large number of cars for service. And, large scale agency
+                has a large number of employees and services for facilities and help for large families.
+                This kind of weakness assists other companies in dealing with customers easily and can run
+                their company as a competitor in the same market.
+            </p>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                3. Opportunities
+            </h1> <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                This is one of the best solutions for the company to merge with other companies to expand
+                the operation to the next level. A relationship with a nationally recognizable company assists
+                in running the brand without any difficulties. This indicates the usage of vehicles provided by car
+                rental agencies might be high. This kind of relationship helps to grow
+                the number of travels due to the merger of both brand facilities. This leads to assisting the brand
+                operation to expand by opening tertiary locations. This kind of opportunity increases the
+                number of vehicles for public services which will be ready for everyday public service.
+                On the other hand, it could provide job opportunities for employees while increasing
+                the number of vehicles after the merge. These opportunities will be provided if the company merges with
+                A nationally recognizable brand.
+            </p>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                4. Threats
+            </h1> <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                There are a handful of car rental agencies that face threats in their own business. The
+                common risk faced by our client company like those faced by other related brands is that in
+                urban areas or major cities. In major cities, due to heavy traffic and business
+                people or any normal employee having a hectic schedule, they prefer to ride
+                bicycles rather than rent a car for rent. Our client company provides service for both cities
+                and rural areas, but they get orders for long tours rather than for short distances. And, this type
+                of order is occasionally got by our client company. This type of threat will be faced by our
+                client company.
+            </p>
+            <br><br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Overall, we conclude that our company has lots of strengths and some weaknesses to run the
+                company in the same market as other companies. They have the strength to facilitate their clients with
+                good location prices and provide good service. Likewise, our client car rental company has
+                some weaknesses while running the company. I have some problems with renowned companies for
+                A large family. Moreover, they can get more opportunities when they merge with nationally renowned
+                franchise brands to extend their company. But, they have some threats while they
+                focus on major city areas. This kind of information is displayed in the design phase.
+            </p>
+            <br><br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                4. Design
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                There are various modeling techniques under RAD methodology but we would like to adopt
+                business, process, and data modeling techniques. Business process modeling is represented by a use
+                case and activity diagram which shows the flow of information between various business
+                channels. Similarly, the data modeling technique is represented by ERD or class diagram which
+                helps to identify the data sets and shows the relationship between those data. These diagrams are
+                also called conceptual or logical design. <br> <br>
+                The diagrams that represent all three modeling techniques are described below:
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                4.1 Use case Diagram
+            </h1>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto h-auto content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/use case.png" alt="Use Case Diagram for Mantra CRC">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Use Case Diagram for Mantra CRC</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                In the case of our system, the ‘Car Rental System’ is represented by a rectangular shape. Similarly, two
+                actors are the customer and the employee. Since the actors are external objects, they are placed
+                outside the rectangular shape. Here the customer is the primary actor whereas the employee is a
+                secondary
+                actor who is going to act after the primary actor does something on the system. So, according to
+                the rules, the customer is placed on the left side and the employee on the right side of the system.
+                Moreover, the tasks that can be performed by each actor are connected using a connector. Also,
+                two types of customers are connected to the customer actor using the generalization
+                arrow. Similarly, the functions or operations that customers and employees can access are bounded
+                by an oval shape inside the rectangular shape.
+            </p>
+            <br> <br>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                4.2 Class Diagram
+            </h1>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto h-auto content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/class diagram.png" alt="Class Diagram for Mantra CRC">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Class Diagram for Mantra CRC</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The above figure is the class diagram of Mantra Car Rental Company where class is denoted
+                by a rectangular shape with three partitions. Class names, attributes, and methods are placed at the
+                top,
+                middle, and bottom portions respectively. Similarly, classes are connected by an arrow called
+                association and dependencies are shown using aggregation and composition. In addition to this,
+                inheritance is shown by generalization sign. <br> <br>
+                From the case study provided, the classes of the car rental system are customer, employee,
+                payment, car, and booking. Two types of customers are general and corporate customers
+                which are inherited to the customer class. So, they are connected with the customer class using
+                A generalization sign. The same thing is applied to payment. Similarly, the composition symbol is used
+                between the customer and payment because to make a booking customer needs to make payment
+                compulsorily.
+            </p>
+            <br> <br>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                4.3 Activity Diagram
+            </h1>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto h-auto content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/activity 1.png" alt="Symbols in Activity Diagram">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Symbols in Activity Diagram</p>
+            <br> <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto h-auto content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/activity 2.png" alt="Activity Diagram">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Activity Diagram</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The activity diagram is used to demonstrate the flow of control of the activity within the system.
+                This diagram describes the dynamic behavior of the system. The main purpose of drawing this
+                The diagram is to make the client understand their system in more detail.So, the above diagram shows how
+                the messages flow from one activity to another.So, the activities that can be performed by the users are
+                represented by rounded rectangles.
+                <br> <br>
+                Similarly, the lines show the flow control among the activities. Decisions like login verification
+                are represented by a diamond shape. In addition to this, the activities that can be performed
+                simultaneously like booking and payment are included inside fork and join. As a whole, this
+                diagram describes the process modeling of the system.
+            </p>
+            <br> <br>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                4.4 Interface Diagram
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Interface design is the graphical layout of the system. Good interface design helps users to easily
+                interact with the system. So, designing user interfaces is an important part of the system development
+                life cycle. Even RAD methodology also mainly focuses on designing UI rather than planning and
+                requirement analysis. So, we have also designed the User Interface of the car rental system and
+                delivered it to the customer repeatedly to gather feedback and refine the interface designs
+                according to the feedback provided to us. So, the final user interface design of ‘Mantra Car
+                Rental System’ that we have designed is listed below:
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/available cars.png" alt="Interface showing available cars">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Interface showing available cars</p>
+            <br> <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/login form.png" alt="Interface showing Login form">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Interface showing Login form</p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/home page.png" alt="Interface showing Home Page">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Interface showing Home Page</p>
+            <br> <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/car booking.png" alt="Interface showing car booking page">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Interface showing car booking page</p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/admin panel.png" alt="Interface showing admin panel">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Interface showing admin panel</p>
+            <br> <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/registration.png"
+                alt="Interface showing user registration page">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Interface showing user registration page</p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/payment form.png" alt="Interface showing payment page">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Interface showing payment page</p>
+            <br> <br>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                5. Implementation and Deployment
+            </h1>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                5.1 Construction
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Construction is the phase where the complete system is built by using several software and
+                programming languages on a dedicated system. It begins with getting approval from the owner
+                of the company on the suggested prototype. The system development team will prepare for different
+                resources like software development and interface design tools. Our system is web-based so it
+                is necessary to work on many web browsers like Chrome and safari. Following are the
+                programming languages and software tools that will be used for website development for our
+                system.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                i. HTML, CSS & Javascript
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                HTML is the key programming language which is the standard language for web
+                development (Vodnik & Anderson, 2021). It can be used to make front-end designs for our
+                system where the user will interconnect with the system. CSS is a language that provides
+                easy control for the display of web pages and easily customizes the layout ("The
+                Importance of CSS in Web Development", 2015). For our online rental system,
+                JavaScript can be used for colors hovering the mouse and other attractive designs.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                ii. MySQL
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                It is a standard language for storing, modifying, and retrieving data from the database.
+                MySQL can be used in online car rental systems, to store the data of many customers and
+                staff of a company which will make it easier than keeping records on paper.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                iii. SSL Certification (Security Feature)
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The car rental website can also use SSL Certification which ensures that user’s
+                confidential information is protected safely. Our system will have a URL web with
+                HTTPS which will be safe for inputting user information into the system.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                iv. Amazon Web Services
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                It provides services for backup cloud storage. The car rental system can store their data
+                and information in cloud storage which also helps in green computing.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                v. Adobe Dreamweaver
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Abode Dreamweaver is a versatile web development tool that supports many languages
+                such as HTML, CSS, and JavaScript. It helps to design websites that use virtual aids to
+                minimize errors and speed up in development of sites ("Website design software | Adobe
+                Dreamweaver", 2021).
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                vi. Framer
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Framer is an interface designing and prototyping tool. Our team will use a framer for
+                designing website prototypes using real data. This tool is more convenient and easier to
+                use.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                vii. Microsoft Office
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                It is a product of Microsoft Corporation consisting of Word, Excel, Visio, and other
+                different Microsoft products. We can mainly use Microsoft Word, Visio, and PowerPoint
+                for the system.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                5.2 Testing
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Testing is the process that is done to ensure that the system meets the requirements received
+                from stakeholders. For Mantra Car Rental Company, we will be using a dynamic testing method
+                which is divided into several layers such as Unit testing, Integration testing, System and
+                Acceptance testing (Guru99, 2019). We have described below the most recommended testing for
+                the software that is required for Mantra Car Rental Company.
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/sample test case.png" alt="Sample of Test Case">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Sample of Test Case</p>
+            <br> <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                i. Unit Testing
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                The unit testing is conducted by using the white box method which permits the modification
+                of the system to become effective and efficient if any error is found (Guru, 2019). In our
+                system, it will be used for testing of input text field, password field, functional button on
+                The screen, validation, and constraints. It is performed just before delivering the system to a tester
+                for formal testing.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                ii. Integration Testing
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Integration testing is performed by gathering individual units that interlink together.
+                Among several types, the Big Bang integration system is considered effective and efficient.
+                For Mantra Car Rental Company, it will be done to find interface defects between
+                The original objectives and the system, and to find system functions and modules. The main
+                goal of this testing is to evaluate if communication between individual component of
+                The system works as expected.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                iii. System Testing
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                This is the final test which is done after the system is completely designed and
+                completed. It will be done by black box method (independent tester tests the system) to
+                check the overall conduction of the system. In our system, it can be used to find all the
+                possible design errors, spelling, and grammatical mistakes.
+            </p>
+            <br> <br>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                5.3 System Deployment
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                It is the last phase of the System Development Life Cycle. When the system is tested and fully
+                functional it is ready to be delivered to the customer. So, during the deployment period there arise
+                various questions regarding system deployment but how to deploy the system is our main
+                concern. It’s important to select a suitable technique for a faster and more effective option that is
+                easy for employees and organizations to adopt (Banerjee, 2021).
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/deployment.png" alt="System Deployment">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                System Deployment</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Unfamiliarity with the system might cause issues for end users. So, to make users familiar with the new
+                The system, we have to plan about implementing the parallel running system change over strategy.
+                Despite being expensive, as the old system needs to be operated alongside the new system for a certain
+                period thinking that the data are more important than cost, the company also agreed with
+                our idea. So, this method can be best suited for the deployment of the car rental system. In
+                addition to this, the changeover will be the best option in terms of data integrity as well. Besides
+                this, if
+                the new system gets failure, the old system can be reverted which helps to give continuity to the work
+                without any obstruction.
+            </p>
+            <br> <br>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                6. Selection of Methodology
+            </h1>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-3-text text-left">
+                Rapid Application Development (RAD)
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                RAD (Rapid Application Development) is a software development methodology, designed for
+                high-standard systems along and swift development. Derived from rapid prototyping
+                approximation, the chief objective of this methodology is to provide an upgraded level of the system
+                as well as to enhance development proficiency. RAD is one of the highly favored methodologies
+                centralized more on tasks and user involvement but less on detailed planning and analysis. It is
+                a form of Agile methodology that gives precedence to iterations. The development phases of this
+                methodology are also gathered as concise, iterative evolution patterns as the iterative approach
+                emphasizes productivity and flexibility to correction (Kaur & Verma, 2014).
+            </p>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/rad m.png" alt="System Deployment">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Rapid Application Development (RAD)</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                As shown in the figure above, Rapid Application Development consist of four distinct phases.
+                <br>
+            </p>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                i. Requirement Planning
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                This is the first stage of the Rapid Application Development (RAD) model. In this phase, a
+                comprehensive understanding of business complications is initiated, along with goals, scopes, and
+                functionalities (Kikama Jr, 2010). A required number of meetings are conducted between
+                administration and Information System (IS) management with the motive of reaching
+                cooperation and initiating the development process. If necessary, end users and IS
+                staff will take part in Joint Requirement Planning (JRP) workshops and a lucid visualization
+                of the project is built for further progress.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                ii. User Design
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                In this phase, a circumstantial analysis of business details related to the approached system is
+                done. Meetings are conducted between senior stakeholders where implementation planning
+                about system parts and their functionalities is done. Participants of Joint Requirement
+                Planning (JRP) workshops during the earlier phase carry out analysis of the system. Then,
+                a comprehensive outline blueprint of the system and its area model is constructed (“AN
+                INTRODUCTION TO RAPID APPLICATION DEVELOPMENT,” 2009).
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                iii. Construction
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                During the construction phase, the detailed design is studied and transformed into a functional
+                application. The blueprint and area model constructed during the earlier phase are accustomed to
+                building the application accordingly. Coding as well as documentation also falls under this phase
+                which is further tested to produce a feasible application software.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-4-text text-left">
+                iv. Cut-over
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                This is the final phase of Rapid Application Development (RAD). In this phase, the system is
+                installed in the user’s device and final user testing is done. In necessities, training sessions are
+                also organized to assist users in learning about the device and its functionalities. Also, files and
+                information are transformed from the old system to the new one according to the client’s
+                demands. Once the system is demonstrated, the client’s feedbacks are noted and the decision
+                about the system launch is made (Kikama Jr, 2010).
+            </p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Selection of Rapid Application Development (RAD) for the Car Rental Company (CRC) system can
+                be appropriate as well as advantageous. For a smoothly running company such as Mantra Car
+                Rental, it is strenuous to wait long for a system that is developed for the customer’s welfare. With
+                agility, RAD methodology can assist in building a high-quality system in a short period so
+                that the CRC can operate its daily business operation swiftly. In this methodology, users and
+                executives can participate together throughout the whole project, to achieve
+                business requirements. Clients or stakeholders can see substantial proof of system development
+                during the planning and designing stages, as the process is completely navigable. Staff from CRC
+                can stretch out their doubts straight away and reconsider anything that doesn’t convince them.
+                This helps in establishing a mutual understanding and building a matured relationship with clients.
+            </p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Case tools in RAD can be crucial to bring out maximum productivity and construct a satisfactory
+                outcome. The CRC system can be constructed with uniformity and high standards so that users
+                can find the system easy and compatible to use. Along with tools, the RAD model has more key
+                ingredients that can help us complete the CRC system swiftly. Crucial ingredients that will be
+                heavily involved in the project are:
+            </p>
+            <br>
+            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" style="list-style-type: disc;">
+                <li> Methodology
+                </li>
+                <li> Tools
+                </li>
+                <li> People
+                </li>
+                <li> Management
+                </li>
+            </ul>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/radd.png" alt="RAD Components">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Rapid Application Development Components</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                For Mantra Car Rental Company, this is their introductory step in software systems and digital
+                marketing. So, when meetings for requirement planning are conducted, there are high odds that
+                clients or executives fail to recall every requirement. In another case, they might even
+                come up with new concepts to make some distinctive alterations to the system. In these sorts of
+                conditions, modifications are required. Unlike traditional methodologies, the RAD model
+                focuses on iteration which emphasizes redoing a certain task unless customers are satisfied
+                with the result. In the case of CRC, using the RAD model will allow clients and the project team to make
+                necessary changes at any time so that the company can stay ambitious following its objectives.
+            </p>
+            <br>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto md:h-96 content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/rad model.png" alt="RAD Working Model">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Rapid Application Development Working Model</p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                During the construction phase, the RAD model is considered to be trustworthy while transforming
+                user design into functional software. The reusable code in the RAD model lessens manual coding
+                and space for bugs. The use of prototypes and less risky methods allows users and developers to
+                have a close look at the project and avoid obstructions within the CRC system. Moreover,
+                with RAD, the CRC system can be built by focusing on functionalities rather than taking
+                excessive risks by adding unnecessary complex features.
+            </p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="leading-relaxed md:leading-loose">
+                Once the construction phase is done, the CRC system is in the final stage where the system is installed
+                and closing tests will be done. Since the development period is significantly reduced,
+                The delivery time between iteration and prototype is also minimized. The early integration from the
+                project’s foundation can assist developers in recognizing bugs easily (Softermii, 2021). Early
+                deliveries are provided to clients so that they can continue their business and find complications
+                within the system. With the RAD model, investors and users who will be operating the system in
+                CRC will be asked for feedback so that necessary iterations can be done to enhance the
+                software.
+            </p>
+            <br>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                Gantt chart (Rapid Application Development Model)
+            </h1>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto h-auto content-center mx-auto px-4 rounded-md"
+                src="/assets/images/Mantra Car Rental - SDC/gantt chart.png" alt="Gantt Chart">
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="footnote-text">Figure:
+                Rapid Application Development Working Model</p>
+            <br> <br> <br>
+
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" class="heading-2-text text-left">
+                References
+            </h1>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="mx-8 sm:mx-32 lg:mx-60 leading-relaxed md:leading-loose text-left text-sm sm:text-justify overflow-x-hidden">
+                AN INTRODUCTION TO RAPID APPLICATION DEVELOPMENT. (2009). RAD
+                STRUCTURAL MODEL OVERVIEW, 15–20. https://www.ogcio.gov.hk/en/our_work/
+                infrastructure/methodology/system_development/past_documents/rad/doc/
+                g47a_pub.pdf
+                <br>
+                <br>
+                D. (n.d.). Car Park. Car Park. Retrieved July 18, 2021, from http://app4carpark.com/
+                login
+                <br>
+                <br>
+                D. (2021, July 2). What Is Scrum Methodology? & Scrum Project Management. Digite.
+                https://www.digite.com/agile/scrum-methodology/?fbclid=IwAR0BDgpwizkK-
+                e-_5LiV9tv4W0GmS0rCmMPpsJRBwn7PoKe96unkg4CMUs0
+                <br>
+                <br>
+                Forget about waterfall ! let’s do Rapid Application Development. (2019, April 1). Konijn Design
+                Studio. https://blog.konijnstudio.com/2019/04/rapid-application-development.html
+                <br>
+                <br>
+                Hyundai Elantra Wins Prestigious 2021 North American Car of the Year. (n.d.).
+                HYUNDAI MOTORS. Retrieved July 8, 2021, from https://www.hyundai.com/
+                worldwide/en/company/newsroom/-0000016609
+                <br>
+                <br>
+                Kaur, M., & Verma, N. (2014). INTERNATIONAL JOURNAL OF INNOVATIVE
+                RESEARCH IN TECHNOLOGY. THE UTILITY OF A RAPID APPLICATION
+                DEVELOPMENT (RAD) APPROACH FOR A LARGE COMPLEX
+                INFORMATION SYSTEMS DEVELOPMENT, 1(6), 31–32.
+                <br>
+                <br>
+                Kikama Jr, K. (2010). Securing the Rapid Application Development (RAD) Methodology,
+                31–33. http://cs.lewisu.edu/mathcs/msis/projects/msis595_KividiKikama.pdf
+                <br>
+                <br>
+                Kumar, V. (2021, January 19). A Complete Guide on Software Development
+                Methodologies 2020. SAP Blogs. https://blogs.sap.com/2020/10/08/a-complete-
+                guide-on-software-development-methodologies-2020/?
+                utm_source=dlvr.it&utm_medium=facebook
+                <br>
+                <br>
+                Li, Z. (2013). Design and Realization of Car Rental Management System Based on
+                AJAX+SSH. Information Technology Journal, 12(14), 2756-2761.
+                doi: 10.3923/itj.2013.2756.2761
+                <br>
+                <br>
+                McCormick, M. (2012). Waterfall vs. Agile Methodology (Revised ed., Vol. 2) [E-book].
+                MPCS, inc.
+                <br>
+                <br>
+                Overview Of Online Car Rental Systems Information Technology Essay. (n.d.). Uni
+                Assignment Centre. Retrieved July 15, 2021, from https://
+                www.uniassignment.com/essay-samples/information-technology/overview-of-
+                online-car-rental-systems-information-technology-essay.php
+                <br>
+                <br>
+                Pawar, P. (2019, December 14). Insights to Agile Methodologies for Software
+                Development. Hacker Noon. https://hackernoon.com/a-case-study-type-insight-
+                into-agile-methodologies-for-software-development-cd5932c6
+                <br>
+                <br>
+                Rapid Application Development Model | RAD Model - javatpoint. (n.d.).
+                Www.Javatpoint.Com. Retrieved July 18, 2021, from https://
+                www.javatpoint.com/software-engineering-rapid-application-development-
+                model
+                <br>
+                <br>
+                Rungta, K. (2021, May 28). Waterfall vs. Incremental vs. Spiral vs. Rad Model: Key
+                Difference. Guru99. https://www.guru99.com/compare-waterfall-vs-
+                incremental-vs-spiral-vs-rad.html?
+                fbclid=IwAR2qy7SJvmh9CtnIcPCkr13DnH9aI-
+                yu5NEU8RFuUT9Gp6NSe4AVFi3wR1Y
+                <br>
+                <br>
+                Softermii. (2021, June 16). Rapid Application Development Model: How and When To
+                Use It In Your Software Project. https://www.softermii.com/blog/rapid-
+                application-development-model-how-and-when-to-use-it-in-your-software-
+                project
+                <br>
+                <br>
+                The Ultimate Guide to Rapid Application Development. (2021, May 27). NIX United –
+                Custom Software Development Company in US. https://nix-united.com/blog/
+                the-ultimate-guide-to-rapid-application-development/
+                <br>
+                <br>
+            </p>
+            <br><br> <br> <br>
+
+
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="flex items-center justify-center">
+                <img class="h-4 w-auto" src="/assets/images/rotated-right-arrow-dark-icon.png" alt="">
+                <span class="text-sm">
+                    &nbsp; &nbsp; To understand the project and our work, please read the project documentation.
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+
+    <!-- Downloads and Links  -->
+    <div class="md:flex justify-center">
+        <div class="flex justify-center mt-16 pb-24 md:mb-0 mx-2">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto group flex border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                <img class="w-auto h-5 group-hover:rotate-[-20deg] ease-in-out duration-700"
+                    src="/assets/images/pdf-icon.png" alt="">
+                &nbsp;
+                <a href="/assets/contents/Mantra Car Rental/SDM - Final Group Assignment.pdf"
+                    download="Mantra Car Rental - SDM Document">Download PDF</a>
+            </div>
+        </div>
+        <div class="flex justify-center mt-16 pb-24 md:mb-0 mx-2">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                class="w-auto group flex border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                <img class="w-auto h-5 group-hover:rotate-[-20deg] ease-in-out duration-700"
+                    src="/assets/images/ppt-icon.png" alt="">
+                &nbsp;
+                <a href="/assets/contents/Mantra Car Rental/SDM - Presentation.pptx"
+                    download="Mantra Car Rental - SDM Powerpoint">Download
+                    PPT</a>
+            </div>
+        </div>
+    </div>
+
+    <p class="footnote-text flex justify-center items-end pb-40">Created with love by &nbsp;
+        <a class="font-semibold underline" href="https://www.linkedin.com/in/sandesh-s11/" target="_blank">
+            <img class="h-8 w-auto cursor-pointer animate-pulse" src="/assets/images/Logo-Black.png" alt="">
+        </a>
+        &nbsp;
+    </p>
+
+    <!-- AOS Link  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
