@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="./main.js">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="/assets/images/fav-icon.ico">
+    <title>Sandesh Subedi</title>
+</head>
+
+<body class="font-firaCon text-textColor bg-stone-200" oncontextmenu="return false">
+
+    <!-- Success Message  -->
+    <section id="sectionHome" class="h-screen w-screen bg-gradient-to-b from-linearDark to-linearLight">
+
+
+        <img class="hidden sm:flex absolute top-32 left-80 h-10 w-auto opacity-25 hover:opacity-100 ease-in-out duration-1000"
+            src="/assets/images/stars-icon.png" alt="Star Icon">
+
+        <div class="flex justify-center items-center h-full w-full bg-overlay text-center">
+
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+                <h1 class="text-2xl font-bold leading-loose">Yay! Your message has been successfully sent.
+                </h1>
+                <br>
+                <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                    class="h-[220px] w-auto content-center mx-auto px-4 rounded-md"
+                    src="/assets/images/mail_sent.svg" alt="Mail Sent">
+                <br><br>
+                <p class="text-base font-medium leading-loose mx-8 md:mx-32 lg:mx-64">Message Delivered<br> </p>
+                <p class="mx-6">
+                    As soon as I see your message, I'll try to respond quicker than a cat chasing a laser printer.
+                </p>
+                <br>
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-easing="linear"
+                    class="flex justify-center sm:pt-8">
+                    <div
+                        class="w-auto group flex items-center border border-gray-700 rounded-3xl px-6 py-2 cursor-pointer hover:shadow-[inset_-1px_-1px_8px_0px_#00000024] ease-in-out duration-500">
+                        <img class="h-4 w-auto group-hover:rotate-[45deg] ease-in-out duration-700"
+                            src="/assets/images/external-link-black-icon.png" alt="">
+                        &nbsp; &nbsp;
+                        <a href="/index.html">Go to Home Page</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <img class="hidden sm:flex absolute bottom-32 right-80 h-10 w-auto opacity-20 hover:opacity-100 ease-in-out duration-1000"
+            src="/assets/images/moon-icon.png" alt="Star Icon">
+    </section>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
